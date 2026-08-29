@@ -384,9 +384,17 @@ var REMOTE_CSS_URL = "";
       var t=txt(a); if(t) links.push({t:t, el:a});
     });
 
+    var homeI=ic('<path d="M3 10.5 12 3l9 7.5"/><path d="M5 9.6V21h14V9.6"/><path d="M9.5 21v-6h5v6"/>');
+    var starI=ic('<path d="M12 3l2.6 5.5 6 .5-4.5 4 1.3 6-5.4-3.2L6.6 19l1.3-6-4.5-4 6-.5z"/>');
+    var outI=ic('<path d="M15 4h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2h-3"/><path d="M10 17l5-5-5-5M15 12H3"/>');
     var h='<div class="iw-sp"></div>';   // topbar sin marca (la marca vive en el sidebar)
     var map={};
-    links.forEach(function(it,i){ map[i]=it.el; h+='<a class="iw-tl" data-h="'+i+'">'+it.t+'</a>'; });
+    links.forEach(function(it,i){
+      map[i]=it.el; var tl=it.t.toLowerCase();
+      var ico = tl.indexOf('inicio')>=0?homeI : tl.indexOf('favorit')>=0?starI : (tl.indexOf('desconex')>=0||tl.indexOf('salir')>=0)?outI : '';
+      var cls = (tl.indexOf('desconex')>=0||tl.indexOf('salir')>=0)?'iw-tl iw-tl-out':'iw-tl';
+      h+='<a class="'+cls+'" data-h="'+i+'">'+ico+'<span>'+it.t+'</span></a>';
+    });
     h+='<button class="iw-tb-theme" data-theme-toggle title="Tema claro/oscuro">'+themeIcon()+'</button>';
 
     var bar=document.createElement('div'); bar.id='iw-topbar'; bar.innerHTML=h;

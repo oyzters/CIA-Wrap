@@ -260,9 +260,16 @@ html.iw-hdr.itson-wrap, html.iw-hdr.itson-wrap body { background:var(--iw-surfac
   font-family:var(--iw-ui); background:var(--iw-surface); }
 #iw-topbar .iw-tb-logo { height:26px; width:auto; display:block; }
 #iw-topbar .iw-sp { flex:1; }
-#iw-topbar a.iw-tl { color:var(--iw-ink2); font-size:13px; font-weight:500; text-decoration:none;
-  padding:8px 12px; border-radius:9px; cursor:pointer; white-space:nowrap; }
-#iw-topbar a.iw-tl:hover { background:var(--iw-surface2); color:var(--iw-ink); }
+#iw-topbar a.iw-tl { display:inline-flex; align-items:center; gap:7px; color:var(--iw-ink2); font-size:13px; font-weight:500;
+  text-decoration:none; padding:8px 13px; border-radius:10px; cursor:pointer; white-space:nowrap;
+  border:1px solid transparent; transition:background .13s, color .13s, border-color .13s, transform .1s; }
+#iw-topbar a.iw-tl svg{ width:15px; height:15px; opacity:.85; }
+#iw-topbar a.iw-tl:hover { background:var(--iw-surface2); color:var(--iw-ink); border-color:var(--iw-line); }
+#iw-topbar a.iw-tl:hover svg{ opacity:1; }
+#iw-topbar a.iw-tl:active{ transform:translateY(1px); }
+#iw-topbar a.iw-tl.iw-tl-out{ color:#ff9a9a; }
+#iw-topbar a.iw-tl.iw-tl-out:hover{ background:color-mix(in srgb, #ff6b6b 15%, transparent);
+  color:#ffbcbc; border-color:color-mix(in srgb, #ff6b6b 32%, transparent); }
 #iw-topbar .iw-tb-theme { background:var(--iw-surface2); border:1px solid var(--iw-line);
   width:34px; height:34px; border-radius:9px; color:var(--iw-ink2); cursor:pointer;
   display:grid; place-items:center; flex:0 0 auto; }
