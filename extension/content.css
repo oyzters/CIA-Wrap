@@ -20,32 +20,24 @@
 
 /* modo oscuro (paleta del mockup) — aplica a reskin + shell en todos los frames */
 html.iw-dark {
-  --w-bg: #0a0e18;
-  --w-card: #121829;
-  --w-surface2: #1a2238;
-  --w-ink: #eef2f8;
-  --w-muted: #8c98ae;
-  --w-line: #222c42;
+  --w-bg: #08090d;
+  --w-card: #0f1116;
+  --w-surface2: #16181f;
+  --w-ink: #edf0f5;
+  --w-muted: #868d9b;
+  --w-line: #1e2129;
   --w-accent: #5b9dff;
-  --w-shadow: 0 1px 2px rgba(0,0,0,.5), 0 14px 34px rgba(0,0,0,.6);
+  --w-shadow: 0 1px 2px rgba(0,0,0,.55), 0 14px 34px rgba(0,0,0,.65);
 }
 
-/* ===== Dark con carácter: base azul-marino + grid tech sutil + glows ===== */
+/* ===== Dark sobrio: base muy oscura, apenas un dejo de profundidad (sin neón) ===== */
 html.iw-dark.iw-content body {
   background:
-    linear-gradient(rgba(91,157,255,.035) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(91,157,255,.035) 1px, transparent 1px),
-    radial-gradient(48% 38% at 12% -2%, rgba(91,157,255,.14), transparent 62%),
-    radial-gradient(44% 44% at 104% 4%, rgba(129,140,248,.10), transparent 60%),
-    radial-gradient(62% 52% at 50% 122%, rgba(45,212,191,.06), transparent 60%),
+    radial-gradient(65% 45% at 50% -12%, rgba(91,157,255,.045), transparent 66%),
     var(--w-bg) !important;
-  background-size: 44px 44px, 44px 44px, auto, auto, auto, auto !important;
   background-attachment: fixed !important;
 }
-/* sidebar del frame con tinte marino y highlight superior (profundidad) */
-html.iw-dark.iw-nav body {
-  background:linear-gradient(180deg, color-mix(in srgb, var(--w-card) 88%, #5b9dff 7%), var(--w-card) 55%) !important;
-}
+html.iw-dark.iw-nav body { background: var(--w-card) !important; }
 
 /* scrollbars estilizados (respetan claro/oscuro) — antes salian blancos por defecto */
 html.itson-wrap { scrollbar-width: thin; scrollbar-color: var(--w-line) transparent; }
