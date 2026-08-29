@@ -20,28 +20,31 @@
 
 /* modo oscuro (paleta del mockup) — aplica a reskin + shell en todos los frames */
 html.iw-dark {
-  --w-bg: #0c0d10;
-  --w-card: #16181d;
-  --w-surface2: #1e2126;
-  --w-ink: #f3f5f8;
-  --w-muted: #8b929e;
-  --w-line: #262a30;
+  --w-bg: #0a0e18;
+  --w-card: #121829;
+  --w-surface2: #1a2238;
+  --w-ink: #eef2f8;
+  --w-muted: #8c98ae;
+  --w-line: #222c42;
   --w-accent: #5b9dff;
-  --w-shadow: 0 1px 2px rgba(0,0,0,.4), 0 12px 30px rgba(0,0,0,.55);
+  --w-shadow: 0 1px 2px rgba(0,0,0,.5), 0 14px 34px rgba(0,0,0,.6);
 }
 
-/* ===== Dark con carácter: glows ambientales (no el dark plano genérico) ===== */
+/* ===== Dark con carácter: base azul-marino + grid tech sutil + glows ===== */
 html.iw-dark.iw-content body {
   background:
-    radial-gradient(46% 36% at 12% -2%, rgba(91,157,255,.11), transparent 62%),
-    radial-gradient(42% 42% at 104% 4%, rgba(167,139,250,.09), transparent 60%),
-    radial-gradient(60% 50% at 50% 120%, rgba(45,212,191,.05), transparent 60%),
+    linear-gradient(rgba(91,157,255,.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(91,157,255,.035) 1px, transparent 1px),
+    radial-gradient(48% 38% at 12% -2%, rgba(91,157,255,.14), transparent 62%),
+    radial-gradient(44% 44% at 104% 4%, rgba(129,140,248,.10), transparent 60%),
+    radial-gradient(62% 52% at 50% 122%, rgba(45,212,191,.06), transparent 60%),
     var(--w-bg) !important;
+  background-size: 44px 44px, 44px 44px, auto, auto, auto, auto !important;
   background-attachment: fixed !important;
 }
-/* sidebar del frame con un tinte y highlight superior (profundidad) */
+/* sidebar del frame con tinte marino y highlight superior (profundidad) */
 html.iw-dark.iw-nav body {
-  background:linear-gradient(180deg, color-mix(in srgb, var(--w-card) 90%, #5b9dff 5%), var(--w-card) 55%) !important;
+  background:linear-gradient(180deg, color-mix(in srgb, var(--w-card) 88%, #5b9dff 7%), var(--w-card) 55%) !important;
 }
 
 /* scrollbars estilizados (respetan claro/oscuro) — antes salian blancos por defecto */

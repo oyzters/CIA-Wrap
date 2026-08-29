@@ -14,19 +14,22 @@
   --iw-ui:'Inter',system-ui,-apple-system,'Segoe UI',Roboto,sans-serif;
 }
 html.iw-dark{
-  --iw-bg:#0c0d10; --iw-surface:#16181d; --iw-surface2:#1e2126;
-  --iw-ink:#f3f5f8; --iw-ink2:#c6ccd6; --iw-muted:#8b929e;
-  --iw-line:#262a30; --iw-line2:#343a42;
-  --iw-brand:#5b9dff; --iw-brand2:#8bbaff; --iw-soft:rgba(91,157,255,.13);
-  --iw-shadow:0 2px 6px rgba(0,0,0,.4), 0 20px 50px -14px rgba(0,0,0,.65);
+  --iw-bg:#0a0e18; --iw-surface:#121829; --iw-surface2:#1a2238;
+  --iw-ink:#eef2f8; --iw-ink2:#c3ccdd; --iw-muted:#8c98ae;
+  --iw-line:#222c42; --iw-line2:#313d57;
+  --iw-brand:#5b9dff; --iw-brand2:#8bbaff; --iw-soft:rgba(91,157,255,.14);
+  --iw-shadow:0 2px 6px rgba(0,0,0,.45), 0 22px 54px -14px rgba(0,0,0,.7);
 }
 
 /* ===== Dark con carácter: ambiente en la homepage + profundidad glass ===== */
 html.iw-dark.iw-shell body{
   background:
-    radial-gradient(44% 34% at 18% -2%, rgba(91,157,255,.11), transparent 60%),
-    radial-gradient(40% 40% at 100% 6%, rgba(167,139,250,.08), transparent 60%),
+    linear-gradient(rgba(91,157,255,.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(91,157,255,.035) 1px, transparent 1px),
+    radial-gradient(46% 36% at 18% -2%, rgba(91,157,255,.14), transparent 60%),
+    radial-gradient(42% 42% at 100% 6%, rgba(129,140,248,.09), transparent 60%),
     var(--iw-bg) !important;
+  background-size:44px 44px, 44px 44px, auto, auto, auto !important;
   background-attachment:fixed !important;
 }
 html.iw-dark #iw-side{ background:linear-gradient(180deg, color-mix(in srgb, var(--iw-surface) 90%, #5b9dff 4%), var(--iw-surface) 60%); }
