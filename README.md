@@ -1,9 +1,14 @@
-# ITSON Wrap
+# CIA Wrap
 
-Capa visual (reskin) para el portal **PeopleSoft** de ITSON
-(`smartweb1/2.itson.edu.mx`). Le pone una interfaz limpia — tipografía Inter,
-tarjetas, inputs y botones modernos, tablas legibles — **sobre tu propia
-sesión**, ya iniciada con tu cuenta.
+Interfaz moderna para el portal **CIA / PeopleSoft** del ITSON
+(`apps9.itson.edu.mx/CIA` y `smartweb1/2.itson.edu.mx`): el mismo sistema de
+diseño que [iVirtual Wrap](https://github.com/oyzters/iVirtual-Wrap) — Figtree,
+azules ITSON, modo claro, oscuro o automático —, pantallas a todo lo ancho,
+iconos propios en lugar de los GIF de PeopleSoft y el Centro de Alumnado como
+panel. Todo **sobre tu propia sesión**, ya iniciada con tu cuenta.
+
+Sitio: [cia.potronet.com](https://cia.potronet.com) · Acceso directo al portal:
+[cia.potronet.com/entrar](https://cia.potronet.com/entrar)
 
 > **Importante — qué NO es esto:** no es un login alterno ni un proxy. Cada
 > persona se conecta directo a ITSON con su cuenta; esto solo re-estiliza la
@@ -14,41 +19,38 @@ sesión**, ya iniciada con tu cuenta.
 > cifrar. Eso solo lo puede arreglar el área de TI de ITSON en el servidor;
 > ninguna capa del lado del cliente lo soluciona. Vale la pena reportarlo.
 
-## Tres formas de usarlo
+## Instalar
 
-Todas hacen lo mismo (el mismo reskin); cambia cómo se activa y cómo se reparte.
+**Chrome, Edge o Brave:** desde la [Chrome Web Store](https://cia.potronet.com) —
+botón *Agregar a Chrome*. Se actualiza sola; cuando hay versión nueva, el ícono
+muestra **NEW** y el menú de la extensión lista las novedades.
 
-| Forma | Instalación | Se activa | Repartir a otros |
-|---|---|---|---|
-| **Extensión** (`extension/`) | Cargar en el navegador | Sola, siempre | Publicar en la store |
-| **Userscript** (`userscript/`) | Tampermonkey + pegar | Sola | Compartir el archivo |
-| **Bookmarklet** (`bookmarklet/`) | Arrastrar un marcador | Clic en cada visita | Compartir un link |
+Desde el ícono de la extensión se enciende o apaga, se elige el tema (claro,
+oscuro o automático) y se abre el portal.
 
----
+### Desde el código (para desarrollar)
 
-### 1) Extensión (recomendada) — se activa sola
+1. Ve a `chrome://extensions` y activa el **modo de desarrollador**.
+2. **Cargar descomprimida** → la carpeta `extension/`.
+3. Entra al CIA: la interfaz se aplica sola.
 
-**Chrome / Edge / Brave:**
-1. Ve a `chrome://extensions`.
-2. Activa **Modo de desarrollador** (arriba a la derecha).
-3. **Cargar descomprimida** → selecciona la carpeta `extension/`.
-4. Entra a ITSON. La interfaz limpia se aplica sola; abajo a la derecha hay un
-   botón **Wrap ON/OFF**, y también puedes prender/apagar desde el ícono de la
-   extensión.
+Para generar el `.zip` de la tienda: `python tools/package.py` (ver
+[STORE.md](STORE.md) para publicar y [CHANGELOG.md](CHANGELOG.md) para las
+versiones).
 
-**Firefox:**
-1. Ve a `about:debugging#/runtime/this-firefox`.
-2. **Cargar complemento temporal…** → elige `extension/manifest.json`.
-   (Temporal = se quita al cerrar Firefox. Para permanente hay que firmarlo en
-   addons.mozilla.org.)
+## Otras formas (versión anterior)
 
-### 2) Userscript — se activa sola, sin cargar extensión
+El userscript y el bookmarklet siguen funcionando, pero son de **antes de la
+v1.0**: no traen el rediseño de las pantallas, los iconos ni el panel del
+Centro de Alumnado. Para la experiencia completa, usa la extensión.
+
+### Userscript — se activa sola, sin cargar extensión
 
 1. Instala [Tampermonkey](https://www.tampermonkey.net/) o Violentmonkey.
 2. Panel → **Crear nuevo script** → pega el contenido de
    `userscript/itson-peoplesoft-wrap.user.js` → **Guardar**.
 
-### 3) Bookmarklet — un link, cero instalación
+### Bookmarklet — un link, cero instalación
 
 - Abre `bookmarklet/itson-wrap-installer.html` en el navegador y **arrastra el
   botón azul** a tu barra de marcadores; o copia el código y crea el marcador a
@@ -58,46 +60,34 @@ Todas hacen lo mismo (el mismo reskin); cambia cómo se activa y cómo se repart
 
 ---
 
-## ¿Tengo que actualizar la extensión en cada cambio?
+## Desarrollo
 
-Depende de qué cambies:
-
-- **Diseñando (iterar rápido):** usa el **userscript**. En Tampermonkey editas →
-  Guardar → **F5** en la página. Sin recargar nada. Cuando el diseño te guste, lo
-  pasas a `extension/content.css`.
-- **Cambios en la extensión cargada localmente:** `chrome://extensions` → botón
-  **↻ recargar** en la tarjeta → **F5**. Es un clic, no una reinstalación.
-- **No tocar la extensión en cada cambio visual (recomendado para repartir):**
-  pon la URL de un `.css` hospedado en `REMOTE_CSS_URL` (arriba de
-  `extension/content.js`). Editas ese archivo en un solo lugar (GitHub Pages,
-  etc.) y **todos reciben el cambio al recargar la página, sin reinstalar**.
-  El `.css` remoto debe tener sus reglas bajo `html.itson-wrap` y ser `https`.
-  `content.css` empaquetado queda como base/fallback. (MV3 permite CSS remoto;
-  **no** permite JS remoto, pero el JS casi no cambia.)
-- **Extensión publicada en la store:** al subir una versión nueva, Chrome
-  actualiza a todos los usuarios solos en unas horas. Tampoco reinstalan.
-
-## Ajustar el diseño
-
-Los colores y el radio de las tarjetas están como variables `--w-*` al inicio de
-`extension/content.css` (y replicados en el userscript). Cámbialos ahí y recarga.
-
-## Afinar a las pantallas reales
-
-El reskin apunta a las clases estándar de PeopleTools 8
-(`PSEDITBOX`, `PSPUSHBUTTON`, `PSLEVEL1GRID`, `PAGROUPBOX`, …). ITSON tiene CSS
-personalizado encima, así que algunas pantallas pueden necesitar reglas extra.
-Para afinarlas, abre la pantalla ya logueada, inspecciona el elemento y agrega
-la clase real a `content.css`.
+- **Cambios en la extensión cargada localmente:** `chrome://extensions` → **↻**
+  en la tarjeta → **F5** en el portal.
+- **Diseño:** los tokens (colores, radios, sombras, tipografía) están al inicio
+  de `extension/content.css`, con su versión oscura. `pages.css` cubre las
+  pantallas de componente, `shell.css` el sidebar y la barra superior, e
+  `icons.css` se genera con `python tools/build-icons.py`.
+- **Pantallas nuevas:** el reskin apunta a las clases estándar de PeopleTools 8
+  (`PSEDITBOX`, `PSPUSHBUTTON`, `PSLEVEL1GRID`, `PAGROUPBOX`, …). Si una pantalla
+  se ve mal, inspecciona el elemento y agrega la clase real a `pages.css`.
+- **Publicar una versión:** sube `version` en `extension/manifest.json`, agrega
+  la entrada en `CHANGELOG.md` y en `extension/changelog.js` (lo que ve el
+  usuario en el menú), y crea el tag. Detalle en [STORE.md](STORE.md).
 
 ## Estructura
 
 ```
-itson-wrap/
-├─ extension/     Extensión MV3 (Chrome/Edge/Brave/Firefox)
-├─ userscript/    Versión Tampermonkey/Violentmonkey
-├─ bookmarklet/   Bookmarklet + página instaladora
-└─ README.md
+CIA-Wrap/
+├─ extension/       Extensión MV3 (lo que se publica en la tienda)
+├─ tools/           package.py (zip para la tienda) y build-icons.py
+├─ entrar/          cia.potronet.com/entrar → redirige al portal
+├─ privacidad/      cia.potronet.com/privacidad → política de privacidad
+├─ index.html       la landing (cia.potronet.com)
+├─ userscript/      versión Tampermonkey (anterior a la v1.0)
+├─ bookmarklet/     bookmarklet + página instaladora (anterior a la v1.0)
+├─ CHANGELOG.md     historial de versiones
+└─ STORE.md         todo lo que pide la Chrome Web Store
 ```
 
 ## Licencia

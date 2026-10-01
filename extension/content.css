@@ -1,47 +1,116 @@
 /*
- * ITSON Wrap - capa visual para PeopleSoft clasico (PeopleTools 8).
+ * CIA Wrap - capa visual para PeopleSoft clasico (PeopleTools 8).
  * Todas las reglas viven bajo html.itson-wrap: content.js pone o quita esa
  * clase para activar/desactivar, sin recargar la pagina.
  */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap');
 
+/* ============================================================
+   Sistema de diseño compartido con iVirtual Wrap (src/base.css):
+   mismos azules ITSON, neutros, radios, sombras y tipografía.
+   Los alias --w-* / --iw-* de abajo mantienen funcionando las reglas
+   existentes sin tener que renombrarlas una por una.
+   ============================================================ */
 :root {
-  --w-bg: #eef1f6;
-  --w-card: #ffffff;
-  --w-surface2: #f4f6fb;
-  --w-ink: #1c2230;
-  --w-muted: #5b6472;
-  --w-line: #e3e7ee;
-  --w-accent: #2f5bea;
-  --w-radius: 12px;
-  --w-shadow: 0 1px 2px rgba(20,30,55,.06), 0 8px 24px rgba(20,30,55,.08);
-  --w-font: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+  --blue-900: #082a4d;
+  --blue-800: #0a3a66;
+  --blue-700: #0b5cad;   /* primario */
+  --blue-600: #1461bd;
+  --blue-500: #1a73c7;   /* accent */
+  --blue-300: #6aa9e0;
+  --blue-100: #d6e6f7;
+  --blue-50:  #eef5fc;
+
+  --ink:     #0f1b2d;
+  --ink-2:   #38465c;
+  --muted:   #647085;
+  --line:    #e5eaf2;
+  --surface: #ffffff;
+  --canvas:  #f4f7fb;
+  --danger:  #c0392b;
+  --ok:      #0f7052;
+  --warn:    #8a590c;
+
+  --danger-50:  color-mix(in srgb, var(--danger) 10%, var(--surface));
+  --focus-ring: color-mix(in srgb, var(--blue-500) 18%, transparent);
+  --nav-glass:  color-mix(in srgb, var(--surface) 93%, transparent);
+  --zebra:      color-mix(in srgb, var(--ink) 3%, var(--surface));
+
+  /* rellenos con texto blanco encima: NO cambian por modo (ver base.css) */
+  --fill-primary:    #0b5cad;
+  --fill-primary-hi: #1461bd;
+  /* texto de "activo/actual": alias de --blue-800 en claro, --blue-700 en oscuro */
+  --current: var(--blue-800);
+
+  --r-sm: 8px;
+  --r:    12px;
+  --r-lg: 16px;
+  --r-xl: 22px;
+
+  --sh-1: 0 1px 2px rgba(15, 27, 45, .06), 0 1px 3px rgba(15, 27, 45, .05);
+  --sh-2: 0 4px 14px rgba(15, 27, 45, .08);
+  --sh-3: 0 12px 34px rgba(10, 42, 102, .16);
+
+  --font-body: "Figtree", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --font-head: "Plus Jakarta Sans", var(--font-body);
+  --fs-title:   clamp(22px, 2.4vw, 30px);
+
+  color-scheme: light;
+
+  /* alias del reskin */
+  --w-bg: var(--canvas);
+  --w-card: var(--surface);
+  --w-surface2: var(--zebra);
+  --w-ink: var(--ink);
+  --w-muted: var(--muted);
+  --w-line: var(--line);
+  --w-accent: var(--blue-700);
+  --w-radius: var(--r);
+  --w-shadow: var(--sh-1);
+  --w-font: var(--font-body);
 }
 
-/* modo oscuro (paleta del mockup) — aplica a reskin + shell en todos los frames */
+/* modo oscuro: mismos tokens que iVirtual Wrap — aplica a reskin + shell en todos los frames */
 html.iw-dark {
-  --w-bg: #0c0d10;
-  --w-card: #16181d;
-  --w-surface2: #1e2126;
-  --w-ink: #f3f5f8;
-  --w-muted: #8b929e;
-  --w-line: #262a30;
-  --w-accent: #5b9dff;
-  --w-shadow: 0 1px 2px rgba(0,0,0,.4), 0 12px 30px rgba(0,0,0,.55);
+  --blue-900: #0a0f1a;
+  --blue-800: #101a2c;
+  --blue-700: #5b9dff;
+  --blue-600: #8bbaff;
+  --blue-500: #5b9dff;
+  --blue-300: #3f6fb0;
+  --blue-100: rgba(91, 157, 255, .22);
+  --blue-50:  rgba(91, 157, 255, .12);
+
+  --ink:     #f4f6f9;
+  --ink-2:   #c7cdd8;
+  --muted:   #93a0b0;
+  --line:    rgba(255, 255, 255, .09);
+  --surface: #191d25;
+  --canvas:  #0e1116;
+  --danger:  #ff6b5c;
+  --ok:      #35c98f;
+  --warn:    #e0a530;
+
+  --current: var(--blue-700);
+
+  --sh-1: 0 1px 2px rgba(0, 0, 0, .5), 0 1px 3px rgba(0, 0, 0, .4);
+  --sh-2: 0 4px 14px rgba(0, 0, 0, .45);
+  --sh-3: 0 12px 34px rgba(0, 0, 0, .55);
+
+  color-scheme: dark;
 }
 
-/* ===== Dark con carácter: glows ambientales (no el dark plano genérico) ===== */
-html.iw-dark.iw-content body {
-  background:
-    radial-gradient(46% 36% at 12% -2%, rgba(91,157,255,.11), transparent 62%),
-    radial-gradient(42% 42% at 104% 4%, rgba(167,139,250,.09), transparent 60%),
-    radial-gradient(60% 50% at 50% 120%, rgba(45,212,191,.05), transparent 60%),
-    var(--w-bg) !important;
-  background-attachment: fixed !important;
-}
-/* sidebar del frame con un tinte y highlight superior (profundidad) */
-html.iw-dark.iw-nav body {
-  background:linear-gradient(180deg, color-mix(in srgb, var(--w-card) 90%, #5b9dff 5%), var(--w-card) 55%) !important;
+/* Sin destello del portal original: el content script entra en document_start
+   y pone .itson-wrap de inmediato, pero los reacomodos (shell, sidebar, ancho
+   completo) esperan al DOM completo. Hasta entonces no se pinta el cuerpo;
+   content.js pone .iw-ready al terminar (con respaldo por tiempo). */
+html.itson-wrap:not(.iw-ready) body { visibility: hidden !important; }
+
+/* encabezados con la tipografía de títulos de iVirtual */
+html.itson-wrap h1, html.itson-wrap h2, html.itson-wrap h3,
+html.itson-wrap .PAPAGETITLE, html.itson-wrap .PATRANSACTIONTITLE {
+  font-family: var(--font-head) !important;
+  letter-spacing: -.01em;
 }
 
 /* scrollbars estilizados (respetan claro/oscuro) — antes salian blancos por defecto */
@@ -111,8 +180,8 @@ html.itson-wrap textarea:focus,
 html.itson-wrap select:focus,
 html.itson-wrap input[type='text']:focus,
 html.itson-wrap input[type='password']:focus {
-  border-color: var(--w-accent) !important;
-  box-shadow: 0 0 0 3px rgba(47,91,234,.15) !important;
+  border-color: var(--blue-500) !important;
+  box-shadow: 0 0 0 4px var(--focus-ring) !important;
 }
 
 /* botones */
@@ -121,24 +190,24 @@ html.itson-wrap input[type='button'],
 html.itson-wrap input[type='submit'],
 html.itson-wrap .SSSBUTTON_CONFIRMLINK,
 html.itson-wrap a.PSPUSHBUTTONTBLINK {
-  background: var(--w-accent) !important;
+  background: var(--fill-primary) !important;
   color: #fff !important;
   border: none !important;
-  border-radius: 8px !important;
+  border-radius: var(--r-sm) !important;
   padding: 8px 16px !important;
   font-weight: 600 !important;
   cursor: pointer !important;
-  box-shadow: none !important;
-  transition: filter .12s, transform .02s;
+  box-shadow: var(--sh-1) !important;
+  transition: background .15s ease, box-shadow .15s ease, transform .06s ease;
 }
 html.itson-wrap input.PSPUSHBUTTON:hover,
-html.itson-wrap input[type='submit']:hover { filter: brightness(1.06) !important; }
+html.itson-wrap input[type='submit']:hover { background: var(--fill-primary-hi) !important; box-shadow: var(--sh-2) !important; }
 html.itson-wrap input.PSPUSHBUTTON:active { transform: translateY(1px) !important; }
 
 /* links */
 html.itson-wrap a.PSHYPERLINK,
 html.itson-wrap a { color: var(--w-accent) !important; }
-html.itson-wrap a.PSHYPERLINK:hover { text-decoration: underline !important; }
+html.itson-wrap a.PSHYPERLINK:hover { text-decoration: none !important; }
 
 /* grids / tablas */
 html.itson-wrap table.PSLEVEL1GRID,
@@ -147,8 +216,7 @@ html.itson-wrap table.PSLEVEL2GRID {
   border-collapse: separate !important;
   border-spacing: 0 !important;
   border: 1px solid var(--w-line) !important;
-  border-radius: 10px !important;
-  overflow: hidden !important;
+  border-radius: var(--r) !important;
   background: var(--w-card) !important;
 }
 html.itson-wrap th.PSLEVEL1GRIDCOLUMNHDR,
@@ -188,16 +256,15 @@ html.itson-wrap font { font-family: var(--w-font) !important; }
 html.itson-wrap table.PTPAGELET {
   border: 1px solid var(--w-line) !important;
   border-collapse: separate !important;
-  border-radius: 14px !important;
-  overflow: hidden !important;
+  border-radius: var(--r-lg) !important;
   box-shadow: var(--w-shadow) !important;
   background: var(--w-card) !important;
 }
 html.itson-wrap .PTPAGELETHEADER {
-  background: linear-gradient(180deg, var(--w-accent), #2447c9) !important;
+  background: var(--fill-primary) !important;
   color: #fff !important;
-  font-family: var(--w-font) !important;
-  font-weight: 600 !important;
+  font-family: var(--font-head) !important;
+  font-weight: 700 !important;
   font-size: 13.5px !important;
   padding: 11px 14px !important;
   border: none !important;
@@ -224,8 +291,8 @@ html.itson-wrap a.PTNAVLINK {
 }
 html.itson-wrap a.PSNAVPARENTLINK:hover,
 html.itson-wrap a.PTNAVLINK:hover {
-  background: rgba(47,91,234,.10) !important;
-  color: var(--w-accent) !important;
+  background: var(--blue-50) !important;
+  color: var(--blue-700) !important;
 }
 
 /* header superior: Inicio / Favoritos / Desconexion + Personalizar + Ayuda */
@@ -263,7 +330,7 @@ html.iw-nav.itson-wrap, html.iw-nav.itson-wrap body { background: var(--w-card) 
 html.iw-nav.itson-wrap a {
   font-family: var(--w-font) !important; color: var(--w-ink) !important; text-decoration: none !important;
 }
-html.iw-nav.itson-wrap a:hover { color: var(--w-accent) !important; text-decoration: underline !important; }
+html.iw-nav.itson-wrap a:hover { color: var(--w-accent) !important; text-decoration: none !important; }
 html.iw-nav.itson-wrap .PTNAVBACKGROUND { background: var(--w-card) !important; }
 
 /* UniversalHeader -> topbar limpio */
@@ -290,7 +357,7 @@ html.itson-wrap .PSTABENABLEDNAV, html.itson-wrap .PSTABSELECTEDNAV {
   font-family: var(--w-font) !important; font-weight: 500 !important;
 }
 html.itson-wrap .PSTABSELECTED, html.itson-wrap .PSTABLONGSELECTED,
-html.itson-wrap .PSTABSELECTEDNAV { color: var(--w-accent) !important; }
+html.itson-wrap .PSTABSELECTEDNAV { color: var(--current) !important; font-weight: 700 !important; }
 
 /* titulos de pagina de componente */
 html.itson-wrap .PAGROUPDIVIDER, html.itson-wrap .PAGROUPBOXLABELINVISIBLE,
@@ -310,8 +377,8 @@ html.itson-wrap .wrap-login,
 html.itson-wrap .login-form {
   background: var(--w-card) !important;
   border: 1px solid var(--w-line) !important;
-  border-radius: 24px !important;
-  box-shadow: var(--w-shadow) !important;
+  border-radius: var(--r-xl) !important;
+  box-shadow: var(--sh-3) !important;
   padding: 44px 40px !important;
   max-width: 410px !important;
   width: 100% !important;
@@ -330,10 +397,10 @@ html.itson-wrap .wrap-login input[type="submit"]:not(.login-form-btn),
 html.itson-wrap .login-form input[type="submit"]:not(.login-form-btn),
 html.itson-wrap .wrap-login a.btn, html.itson-wrap .login-form a.btn {
   margin-top: 22px !important; display: inline-block !important;
-  background: var(--w-accent) !important; color: #fff !important;
-  border: none !important; border-radius: 12px !important; padding: 12px 28px !important;
+  background: var(--fill-primary) !important; color: #fff !important;
+  border: none !important; border-radius: var(--r) !important; padding: 12px 28px !important;
   font-weight: 600 !important; font-size: 14px !important; cursor: pointer !important;
-  box-shadow: 0 8px 20px -8px var(--w-accent) !important; text-decoration: none !important;
+  box-shadow: var(--sh-1) !important; text-decoration: none !important;
 }
 /* si el login-form va anidado dentro de wrap-login, evitar doble tarjeta */
 html.itson-wrap .wrap-login .login-form {
@@ -348,14 +415,14 @@ html.itson-wrap .wrap-input { margin-bottom: 13px !important; }
 html.itson-wrap input.input {
   width: 100% !important; box-sizing: border-box !important; min-height: 52px !important;
   background: var(--w-surface2) !important;
-  border: 1px solid var(--w-line) !important; border-radius: 14px !important;
+  border: 1.5px solid var(--w-line) !important; border-radius: var(--r) !important;
   padding: 15px 16px !important; color: var(--w-ink) !important;
   font-size: 15px !important; line-height: 1.2 !important; outline: none !important;
   transition: border-color .15s, box-shadow .15s, background .15s;
 }
 html.itson-wrap input.input:focus {
-  border-color: var(--w-accent) !important; background: var(--w-card) !important;
-  box-shadow: 0 0 0 4px rgba(91,157,255,.16) !important;
+  border-color: var(--blue-500) !important; background: var(--w-card) !important;
+  box-shadow: 0 0 0 4px var(--focus-ring) !important;
 }
 html.itson-wrap input.input::placeholder { color: var(--w-muted) !important; }
 
@@ -363,14 +430,14 @@ html.itson-wrap .container-login-form-btn { margin-top: 18px !important; }
 html.itson-wrap .login-form-btn {
   width: 100% !important; box-sizing: border-box !important; min-height: 54px !important;
   display: inline-flex !important; align-items: center !important; justify-content: center !important;
-  background: var(--w-accent) !important; color: #fff !important;
-  border: none !important; border-radius: 14px !important; padding: 16px 22px !important;
-  font-weight: 700 !important; font-size: 14.5px !important; letter-spacing: .05em !important;
-  text-transform: uppercase !important; cursor: pointer !important;
-  box-shadow: 0 10px 24px -10px var(--w-accent), inset 0 1px 0 rgba(255,255,255,.22) !important;
-  transition: transform .12s ease, filter .12s ease, box-shadow .12s ease;
+  background: linear-gradient(90deg, var(--fill-primary-hi), var(--fill-primary)) !important; color: #fff !important;
+  border: none !important; border-radius: var(--r) !important; padding: 16px 22px !important;
+  font-weight: 700 !important; font-size: 14.5px !important; letter-spacing: .02em !important;
+  cursor: pointer !important;
+  box-shadow: var(--sh-2) !important;
+  transition: transform .06s ease, background .15s ease, box-shadow .15s ease;
 }
-html.itson-wrap .login-form-btn:hover { filter: brightness(1.06) !important; box-shadow: 0 14px 30px -10px var(--w-accent), inset 0 1px 0 rgba(255,255,255,.25) !important; }
+html.itson-wrap .login-form-btn:hover { background: var(--fill-primary-hi) !important; box-shadow: var(--sh-3) !important; }
 html.itson-wrap .login-form-btn:active { transform: translateY(1px) !important; }
 
 html.itson-wrap .text-password, html.itson-wrap .text-password .txt1 { color: var(--w-muted) !important; }
