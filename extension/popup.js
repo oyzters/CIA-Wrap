@@ -8,6 +8,7 @@ var segBtns = document.querySelectorAll('.seg button[data-theme]');
 function paintEnabled(v){
   sw.setAttribute('aria-checked', v ? 'true' : 'false');
   st.textContent = v ? 'Activada' : 'Desactivada';
+  document.body.classList.toggle('on', !!v);
 }
 function paintTheme(v){
   document.documentElement.setAttribute('data-theme', v === 'light' ? 'light' : 'dark');

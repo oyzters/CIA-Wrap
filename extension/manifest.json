@@ -11,10 +11,10 @@
         "*://smartweb2.itson.edu.mx/*",
         "*://apps9.itson.edu.mx/*"
       ],
-      "css": ["content.css", "shell.css"],
+      "css": ["content.css", "shell.css", "pages.css", "icons.css"],
       "js": ["content.js"],
       "all_frames": true,
-      "run_at": "document_end"
+      "run_at": "document_start"
     }
   ],
   "action": {

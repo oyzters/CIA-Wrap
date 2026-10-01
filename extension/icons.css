@@ -1,0 +1,419 @@
+/* GENERADO por tools/build-icons.py — no editar a mano. Ver la docstring del script. */
+
+html.itson-wrap img[src*="PT_PROMPT"],
+html.itson-wrap input[type="image"][src*="PT_PROMPT"],
+html.itson-wrap img[src*="PT_NAV_GO"],
+html.itson-wrap input[type="image"][src*="PT_NAV_GO"],
+html.itson-wrap img[src*="PT_PREVIOUSROW_D"],
+html.itson-wrap input[type="image"][src*="PT_PREVIOUSROW_D"],
+html.itson-wrap img[src*="PT_NEXTROW_D"],
+html.itson-wrap input[type="image"][src*="PT_NEXTROW_D"],
+html.itson-wrap img[src*="PT_PREVIOUSROW"],
+html.itson-wrap input[type="image"][src*="PT_PREVIOUSROW"],
+html.itson-wrap img[src*="PT_NEXTROW"],
+html.itson-wrap input[type="image"][src*="PT_NEXTROW"],
+html.itson-wrap img[src*="PT_DOWNLOAD"],
+html.itson-wrap input[type="image"][src*="PT_DOWNLOAD"],
+html.itson-wrap img[src*="PS_COLLAPSE_ICN"],
+html.itson-wrap input[type="image"][src*="PS_COLLAPSE_ICN"],
+html.itson-wrap img[src*="PT_COLLAPSE"],
+html.itson-wrap input[type="image"][src*="PT_COLLAPSE"],
+html.itson-wrap img[src*="PS_EXPAND_ICN"],
+html.itson-wrap input[type="image"][src*="PS_EXPAND_ICN"],
+html.itson-wrap img[src*="PT_EXPAND"],
+html.itson-wrap input[type="image"][src*="PT_EXPAND"],
+html.itson-wrap img[src*="PS_ACADEMIC_DEADLINES_ICN"],
+html.itson-wrap input[type="image"][src*="PS_ACADEMIC_DEADLINES_ICN"],
+html.itson-wrap img[src*="PS_VALIDATE_ICN"],
+html.itson-wrap input[type="image"][src*="PS_VALIDATE_ICN"],
+html.itson-wrap img[src*="PT_CALENDAR"],
+html.itson-wrap input[type="image"][src*="PT_CALENDAR"],
+html.itson-wrap img[src*="PT_SAVESEARCH"],
+html.itson-wrap input[type="image"][src*="PT_SAVESEARCH"],
+html.itson-wrap img[src*="PT_ADD"],
+html.itson-wrap input[type="image"][src*="PT_ADD"],
+html.itson-wrap img[src*="PT_DELETE_LARGE"],
+html.itson-wrap input[type="image"][src*="PT_DELETE_LARGE"],
+html.itson-wrap img[src*="PT_DELETE"],
+html.itson-wrap input[type="image"][src*="PT_DELETE"],
+html.itson-wrap img[src*="PS_LEARNING_MANAGEMENT_ICN"],
+html.itson-wrap input[type="image"][src*="PS_LEARNING_MANAGEMENT_ICN"],
+html.itson-wrap img[src*="PS_POINTER_ICN"],
+html.itson-wrap input[type="image"][src*="PS_POINTER_ICN"],
+html.itson-wrap img[src*="PT_SELECT_ALL_BOXES_ICN"],
+html.itson-wrap input[type="image"][src*="PT_SELECT_ALL_BOXES_ICN"],
+html.itson-wrap img[src*="PT_CLEAR_ALL_BOXES_ICN"],
+html.itson-wrap input[type="image"][src*="PT_CLEAR_ALL_BOXES_ICN"],
+html.itson-wrap img[src*="BULLET_"],
+html.itson-wrap input[type="image"][src*="BULLET_"],
+html.itson-wrap img[src*="PS_CS_STATUS_SUCCESS_ICN"],
+html.itson-wrap input[type="image"][src*="PS_CS_STATUS_SUCCESS_ICN"],
+html.itson-wrap img[src*="PS_CS_STATUS_DROPPED_ICN"],
+html.itson-wrap input[type="image"][src*="PS_CS_STATUS_DROPPED_ICN"],
+html.itson-wrap img[src*="PS_CS_STATUS_WAITLIST_ICN"],
+html.itson-wrap input[type="image"][src*="PS_CS_STATUS_WAITLIST_ICN"],
+html.itson-wrap img[src*="PS_CS_STATUS_OPEN_ICN"],
+html.itson-wrap input[type="image"][src*="PS_CS_STATUS_OPEN_ICN"],
+html.itson-wrap img[src*="PS_CS_STATUS_CLOSED_ICN"],
+html.itson-wrap input[type="image"][src*="PS_CS_STATUS_CLOSED_ICN"],
+html.itson-wrap img[src*="PS_CS_STEP01_ENA_ICN"],
+html.itson-wrap input[type="image"][src*="PS_CS_STEP01_ENA_ICN"],
+html.itson-wrap img[src*="PS_CS_STEP01_INP_ICN"],
+html.itson-wrap input[type="image"][src*="PS_CS_STEP01_INP_ICN"],
+html.itson-wrap img[src*="PS_CS_STEP01_DIS_ICN"],
+html.itson-wrap input[type="image"][src*="PS_CS_STEP01_DIS_ICN"],
+html.itson-wrap img[src*="PS_CS_STEP02_ENA_ICN"],
+html.itson-wrap input[type="image"][src*="PS_CS_STEP02_ENA_ICN"],
+html.itson-wrap img[src*="PS_CS_STEP02_INP_ICN"],
+html.itson-wrap input[type="image"][src*="PS_CS_STEP02_INP_ICN"],
+html.itson-wrap img[src*="PS_CS_STEP02_DIS_ICN"],
+html.itson-wrap input[type="image"][src*="PS_CS_STEP02_DIS_ICN"],
+html.itson-wrap img[src*="PS_CS_STEP03_ENA_ICN"],
+html.itson-wrap input[type="image"][src*="PS_CS_STEP03_ENA_ICN"],
+html.itson-wrap img[src*="PS_CS_STEP03_INP_ICN"],
+html.itson-wrap input[type="image"][src*="PS_CS_STEP03_INP_ICN"],
+html.itson-wrap img[src*="PS_CS_STEP03_DIS_ICN"],
+html.itson-wrap input[type="image"][src*="PS_CS_STEP03_DIS_ICN"],
+html.itson-wrap img[src*="PS_CS_STEP04_ENA_ICN"],
+html.itson-wrap input[type="image"][src*="PS_CS_STEP04_ENA_ICN"],
+html.itson-wrap img[src*="PS_CS_STEP04_INP_ICN"],
+html.itson-wrap input[type="image"][src*="PS_CS_STEP04_INP_ICN"],
+html.itson-wrap img[src*="PS_CS_STEP04_DIS_ICN"],
+html.itson-wrap input[type="image"][src*="PS_CS_STEP04_DIS_ICN"],
+html.itson-wrap img[src*="PT_PROCESSING"],
+html.itson-wrap input[type="image"][src*="PT_PROCESSING"] {
+  object-position: -9999px 0 !important;   /* fuera el GIF, se queda la caja */
+  width: 22px !important;
+  height: 22px !important;
+  vertical-align: middle !important;
+  border: 0 !important;
+  padding: 0 !important;
+  box-shadow: none !important;
+}
+
+html.itson-wrap img[src*="PS_CS_STATUS_CLOSED_ICN"],
+html.itson-wrap input[type="image"][src*="PS_CS_STATUS_CLOSED_ICN"] {
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%225.5%22 y=%225.5%22 width=%2213%22 height=%2213%22 rx=%223%22 fill=%22white%22 stroke=%22none%22/%3E%3C/svg%3E") center / 12px 12px no-repeat !important;
+  mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%225.5%22 y=%225.5%22 width=%2213%22 height=%2213%22 rx=%223%22 fill=%22white%22 stroke=%22none%22/%3E%3C/svg%3E") center / 12px 12px no-repeat !important;
+  mask-mode: luminance !important;
+  background: var(--blue-700) !important;
+}
+html.itson-wrap img[src*="PS_CS_STATUS_OPEN_ICN"],
+html.itson-wrap input[type="image"][src*="PS_CS_STATUS_OPEN_ICN"] {
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%227%22 fill=%22white%22 stroke=%22none%22/%3E%3C/svg%3E") center / 12px 12px no-repeat !important;
+  mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%227%22 fill=%22white%22 stroke=%22none%22/%3E%3C/svg%3E") center / 12px 12px no-repeat !important;
+  mask-mode: luminance !important;
+  background: var(--ok) !important;
+}
+html.itson-wrap img[src*="PS_CS_STATUS_WAITLIST_ICN"],
+html.itson-wrap input[type="image"][src*="PS_CS_STATUS_WAITLIST_ICN"] {
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M12 3 2.5 20h19z%22 fill=%22white%22 stroke-linejoin=%22round%22/%3E%3Cpath d=%22M12 10v4.5M12 17.2v.1%22 stroke=%22black%22/%3E%3C/svg%3E") center / 14px 14px no-repeat !important;
+  mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M12 3 2.5 20h19z%22 fill=%22white%22 stroke-linejoin=%22round%22/%3E%3Cpath d=%22M12 10v4.5M12 17.2v.1%22 stroke=%22black%22/%3E%3C/svg%3E") center / 14px 14px no-repeat !important;
+  mask-mode: luminance !important;
+  background: var(--warn) !important;
+}
+html.itson-wrap img[src*="PS_CS_STATUS_DROPPED_ICN"],
+html.itson-wrap input[type="image"][src*="PS_CS_STATUS_DROPPED_ICN"] {
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%229%22 fill=%22white%22 stroke=%22none%22/%3E%3Cpath d=%22m9 9 6 6M15 9l-6 6%22 stroke=%22black%22/%3E%3C/svg%3E") center / 14px 14px no-repeat !important;
+  mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%229%22 fill=%22white%22 stroke=%22none%22/%3E%3Cpath d=%22m9 9 6 6M15 9l-6 6%22 stroke=%22black%22/%3E%3C/svg%3E") center / 14px 14px no-repeat !important;
+  mask-mode: luminance !important;
+  background: var(--danger) !important;
+}
+html.itson-wrap img[src*="PS_CS_STATUS_SUCCESS_ICN"],
+html.itson-wrap input[type="image"][src*="PS_CS_STATUS_SUCCESS_ICN"] {
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%229%22 fill=%22white%22 stroke=%22none%22/%3E%3Cpath d=%22m8 12.5 2.8 2.8L16.5 9.5%22 stroke=%22black%22/%3E%3C/svg%3E") center / 14px 14px no-repeat !important;
+  mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%229%22 fill=%22white%22 stroke=%22none%22/%3E%3Cpath d=%22m8 12.5 2.8 2.8L16.5 9.5%22 stroke=%22black%22/%3E%3C/svg%3E") center / 14px 14px no-repeat !important;
+  mask-mode: luminance !important;
+  background: var(--ok) !important;
+}
+html.itson-wrap img[src*="BULLET_"],
+html.itson-wrap input[type="image"][src*="BULLET_"] {
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%223%22 fill=%22white%22/%3E%3C/svg%3E") center / 10px 10px no-repeat !important;
+  mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%223%22 fill=%22white%22/%3E%3C/svg%3E") center / 10px 10px no-repeat !important;
+  mask-mode: luminance !important;
+  background: var(--blue-700) !important;
+}
+html.itson-wrap img[src*="PT_CLEAR_ALL_BOXES_ICN"],
+html.itson-wrap input[type="image"][src*="PT_CLEAR_ALL_BOXES_ICN"] {
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%224%22 y=%224%22 width=%2216%22 height=%2216%22 rx=%223%22/%3E%3C/svg%3E") center / 16px 16px no-repeat !important;
+  mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%224%22 y=%224%22 width=%2216%22 height=%2216%22 rx=%223%22/%3E%3C/svg%3E") center / 16px 16px no-repeat !important;
+  mask-mode: luminance !important;
+  background: var(--blue-700) !important;
+}
+html.itson-wrap img[src*="PT_SELECT_ALL_BOXES_ICN"],
+html.itson-wrap input[type="image"][src*="PT_SELECT_ALL_BOXES_ICN"] {
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%224%22 y=%224%22 width=%2216%22 height=%2216%22 rx=%223%22/%3E%3Cpath d=%22m8.5 12 2.5 2.5 4.5-5%22/%3E%3C/svg%3E") center / 16px 16px no-repeat !important;
+  mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%224%22 y=%224%22 width=%2216%22 height=%2216%22 rx=%223%22/%3E%3Cpath d=%22m8.5 12 2.5 2.5 4.5-5%22/%3E%3C/svg%3E") center / 16px 16px no-repeat !important;
+  mask-mode: luminance !important;
+  background: var(--blue-700) !important;
+}
+html.itson-wrap img[src*="PS_POINTER_ICN"],
+html.itson-wrap input[type="image"][src*="PS_POINTER_ICN"] {
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22m9 6 6 6-6 6%22/%3E%3C/svg%3E") center / 14px 14px no-repeat !important;
+  mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22m9 6 6 6-6 6%22/%3E%3C/svg%3E") center / 14px 14px no-repeat !important;
+  mask-mode: luminance !important;
+  background: var(--blue-700) !important;
+}
+html.itson-wrap img[src*="PS_LEARNING_MANAGEMENT_ICN"],
+html.itson-wrap input[type="image"][src*="PS_LEARNING_MANAGEMENT_ICN"] {
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1%22/%3E%3Cpath d=%22M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1%22/%3E%3C/svg%3E") center / 16px 16px no-repeat !important;
+  mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1%22/%3E%3Cpath d=%22M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1%22/%3E%3C/svg%3E") center / 16px 16px no-repeat !important;
+  mask-mode: luminance !important;
+  background: var(--blue-700) !important;
+}
+html.itson-wrap img[src*="PT_DELETE"],
+html.itson-wrap input[type="image"][src*="PT_DELETE"] {
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M5 12h14%22/%3E%3C/svg%3E") center / 16px 16px no-repeat !important;
+  mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M5 12h14%22/%3E%3C/svg%3E") center / 16px 16px no-repeat !important;
+  mask-mode: luminance !important;
+  background: var(--danger) !important;
+}
+html.itson-wrap img[src*="PT_DELETE_LARGE"],
+html.itson-wrap input[type="image"][src*="PT_DELETE_LARGE"] {
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M4 7h16M9 7V4.5h6V7M6.5 7l1 13h9l1-13%22/%3E%3Cpath d=%22M10 11v6M14 11v6%22/%3E%3C/svg%3E") center / 18px 18px no-repeat !important;
+  mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M4 7h16M9 7V4.5h6V7M6.5 7l1 13h9l1-13%22/%3E%3Cpath d=%22M10 11v6M14 11v6%22/%3E%3C/svg%3E") center / 18px 18px no-repeat !important;
+  mask-mode: luminance !important;
+  background: var(--danger) !important;
+}
+html.itson-wrap img[src*="PT_ADD"],
+html.itson-wrap input[type="image"][src*="PT_ADD"] {
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M12 5v14M5 12h14%22/%3E%3C/svg%3E") center / 16px 16px no-repeat !important;
+  mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M12 5v14M5 12h14%22/%3E%3C/svg%3E") center / 16px 16px no-repeat !important;
+  mask-mode: luminance !important;
+  background: var(--blue-700) !important;
+}
+html.itson-wrap img[src*="PT_SAVESEARCH"],
+html.itson-wrap input[type="image"][src*="PT_SAVESEARCH"] {
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M6 4h12v17l-6-4-6 4z%22/%3E%3C/svg%3E") center / 16px 16px no-repeat !important;
+  mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M6 4h12v17l-6-4-6 4z%22/%3E%3C/svg%3E") center / 16px 16px no-repeat !important;
+  mask-mode: luminance !important;
+  background: var(--blue-700) !important;
+}
+html.itson-wrap img[src*="PT_CALENDAR"],
+html.itson-wrap input[type="image"][src*="PT_CALENDAR"] {
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%223.5%22 y=%225%22 width=%2217%22 height=%2215.5%22 rx=%222.5%22/%3E%3Cpath d=%22M3.5 10h17M8 3v4M16 3v4%22/%3E%3C/svg%3E") center / 16px 16px no-repeat !important;
+  mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%223.5%22 y=%225%22 width=%2217%22 height=%2215.5%22 rx=%222.5%22/%3E%3Cpath d=%22M3.5 10h17M8 3v4M16 3v4%22/%3E%3C/svg%3E") center / 16px 16px no-repeat !important;
+  mask-mode: luminance !important;
+  background: var(--blue-700) !important;
+}
+html.itson-wrap img[src*="PS_VALIDATE_ICN"],
+html.itson-wrap input[type="image"][src*="PS_VALIDATE_ICN"] {
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%225%22 y=%224%22 width=%2214%22 height=%2217%22 rx=%222.5%22/%3E%3Cpath d=%22M9 4.5V3h6v1.5%22/%3E%3Cpath d=%22m9 13 2 2 4-4%22/%3E%3C/svg%3E") center / 16px 16px no-repeat !important;
+  mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%225%22 y=%224%22 width=%2214%22 height=%2217%22 rx=%222.5%22/%3E%3Cpath d=%22M9 4.5V3h6v1.5%22/%3E%3Cpath d=%22m9 13 2 2 4-4%22/%3E%3C/svg%3E") center / 16px 16px no-repeat !important;
+  mask-mode: luminance !important;
+  background: var(--blue-700) !important;
+}
+html.itson-wrap img[src*="PS_ACADEMIC_DEADLINES_ICN"],
+html.itson-wrap input[type="image"][src*="PS_ACADEMIC_DEADLINES_ICN"] {
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%223.5%22 y=%225%22 width=%2217%22 height=%2215.5%22 rx=%222.5%22/%3E%3Cpath d=%22M3.5 10h17M8 3v4M16 3v4M12 13v3l2 1.5%22/%3E%3C/svg%3E") center / 16px 16px no-repeat !important;
+  mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Crect x=%223.5%22 y=%225%22 width=%2217%22 height=%2215.5%22 rx=%222.5%22/%3E%3Cpath d=%22M3.5 10h17M8 3v4M16 3v4M12 13v3l2 1.5%22/%3E%3C/svg%3E") center / 16px 16px no-repeat !important;
+  mask-mode: luminance !important;
+  background: var(--blue-700) !important;
+}
+html.itson-wrap img[src*="PT_EXPAND"],
+html.itson-wrap input[type="image"][src*="PT_EXPAND"] {
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22m9 6 6 6-6 6%22/%3E%3C/svg%3E") center / 14px 14px no-repeat !important;
+  mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22m9 6 6 6-6 6%22/%3E%3C/svg%3E") center / 14px 14px no-repeat !important;
+  mask-mode: luminance !important;
+  background: var(--blue-700) !important;
+}
+html.itson-wrap img[src*="PS_EXPAND_ICN"],
+html.itson-wrap input[type="image"][src*="PS_EXPAND_ICN"] {
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22m9 6 6 6-6 6%22/%3E%3C/svg%3E") center / 14px 14px no-repeat !important;
+  mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22m9 6 6 6-6 6%22/%3E%3C/svg%3E") center / 14px 14px no-repeat !important;
+  mask-mode: luminance !important;
+  background: var(--blue-700) !important;
+}
+html.itson-wrap img[src*="PT_COLLAPSE"],
+html.itson-wrap input[type="image"][src*="PT_COLLAPSE"] {
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22m6 9 6 6 6-6%22/%3E%3C/svg%3E") center / 14px 14px no-repeat !important;
+  mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22m6 9 6 6 6-6%22/%3E%3C/svg%3E") center / 14px 14px no-repeat !important;
+  mask-mode: luminance !important;
+  background: var(--blue-700) !important;
+}
+html.itson-wrap img[src*="PS_COLLAPSE_ICN"],
+html.itson-wrap input[type="image"][src*="PS_COLLAPSE_ICN"] {
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22m6 9 6 6 6-6%22/%3E%3C/svg%3E") center / 14px 14px no-repeat !important;
+  mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22m6 9 6 6 6-6%22/%3E%3C/svg%3E") center / 14px 14px no-repeat !important;
+  mask-mode: luminance !important;
+  background: var(--blue-700) !important;
+}
+html.itson-wrap img[src*="PT_DOWNLOAD"],
+html.itson-wrap input[type="image"][src*="PT_DOWNLOAD"] {
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M12 4v11M7 10l5 5 5-5%22/%3E%3Cpath d=%22M5 20h14%22/%3E%3C/svg%3E") center / 16px 16px no-repeat !important;
+  mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M12 4v11M7 10l5 5 5-5%22/%3E%3Cpath d=%22M5 20h14%22/%3E%3C/svg%3E") center / 16px 16px no-repeat !important;
+  mask-mode: luminance !important;
+  background: var(--blue-700) !important;
+}
+html.itson-wrap img[src*="PT_NEXTROW"],
+html.itson-wrap input[type="image"][src*="PT_NEXTROW"] {
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22m9 6 6 6-6 6%22/%3E%3C/svg%3E") center / 16px 16px no-repeat !important;
+  mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22m9 6 6 6-6 6%22/%3E%3C/svg%3E") center / 16px 16px no-repeat !important;
+  mask-mode: luminance !important;
+  background: var(--blue-700) !important;
+}
+html.itson-wrap img[src*="PT_PREVIOUSROW"],
+html.itson-wrap input[type="image"][src*="PT_PREVIOUSROW"] {
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22m15 6-6 6 6 6%22/%3E%3C/svg%3E") center / 16px 16px no-repeat !important;
+  mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22m15 6-6 6 6 6%22/%3E%3C/svg%3E") center / 16px 16px no-repeat !important;
+  mask-mode: luminance !important;
+  background: var(--blue-700) !important;
+}
+html.itson-wrap img[src*="PT_NEXTROW_D"],
+html.itson-wrap input[type="image"][src*="PT_NEXTROW_D"] {
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22m9 6 6 6-6 6%22/%3E%3C/svg%3E") center / 16px 16px no-repeat !important;
+  mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22m9 6 6 6-6 6%22/%3E%3C/svg%3E") center / 16px 16px no-repeat !important;
+  mask-mode: luminance !important;
+  background: var(--muted) !important;
+}
+html.itson-wrap img[src*="PT_PREVIOUSROW_D"],
+html.itson-wrap input[type="image"][src*="PT_PREVIOUSROW_D"] {
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22m15 6-6 6 6 6%22/%3E%3C/svg%3E") center / 16px 16px no-repeat !important;
+  mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22m15 6-6 6 6 6%22/%3E%3C/svg%3E") center / 16px 16px no-repeat !important;
+  mask-mode: luminance !important;
+  background: var(--muted) !important;
+}
+html.itson-wrap img[src*="PT_NAV_GO"],
+html.itson-wrap input[type="image"][src*="PT_NAV_GO"] {
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M5 12h14M13 6l6 6-6 6%22/%3E%3C/svg%3E") center / 16px 16px no-repeat !important;
+  mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M5 12h14M13 6l6 6-6 6%22/%3E%3C/svg%3E") center / 16px 16px no-repeat !important;
+  mask-mode: luminance !important;
+  background: var(--blue-700) !important;
+}
+html.itson-wrap img[src*="PT_PROMPT"],
+html.itson-wrap input[type="image"][src*="PT_PROMPT"] {
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2211%22 cy=%2211%22 r=%227%22/%3E%3Cpath d=%22m20 20-3.5-3.5%22/%3E%3C/svg%3E") center / 16px 16px no-repeat !important;
+  mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2211%22 cy=%2211%22 r=%227%22/%3E%3Cpath d=%22m20 20-3.5-3.5%22/%3E%3C/svg%3E") center / 16px 16px no-repeat !important;
+  mask-mode: luminance !important;
+  background: var(--blue-700) !important;
+}
+html.itson-wrap img[src*="PS_CS_STEP01_ENA_ICN"],
+html.itson-wrap input[type="image"][src*="PS_CS_STEP01_ENA_ICN"] {
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%2210%22 fill=%22white%22 stroke=%22none%22/%3E%3Ctext x=%2212%22 y=%2216.3%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-weight=%22700%22 font-size=%2212%22 fill=%22black%22 stroke=%22none%22%3E1%3C/text%3E%3C/svg%3E") center / 20px 20px no-repeat !important;
+  mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%2210%22 fill=%22white%22 stroke=%22none%22/%3E%3Ctext x=%2212%22 y=%2216.3%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-weight=%22700%22 font-size=%2212%22 fill=%22black%22 stroke=%22none%22%3E1%3C/text%3E%3C/svg%3E") center / 20px 20px no-repeat !important;
+  mask-mode: luminance !important;
+  background: var(--blue-700) !important;
+}
+html.itson-wrap img[src*="PS_CS_STEP01_INP_ICN"],
+html.itson-wrap input[type="image"][src*="PS_CS_STEP01_INP_ICN"] {
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%2210%22 fill=%22white%22 stroke=%22none%22/%3E%3Ctext x=%2212%22 y=%2216.3%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-weight=%22700%22 font-size=%2212%22 fill=%22black%22 stroke=%22none%22%3E1%3C/text%3E%3C/svg%3E") center / 20px 20px no-repeat !important;
+  mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%2210%22 fill=%22white%22 stroke=%22none%22/%3E%3Ctext x=%2212%22 y=%2216.3%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-weight=%22700%22 font-size=%2212%22 fill=%22black%22 stroke=%22none%22%3E1%3C/text%3E%3C/svg%3E") center / 20px 20px no-repeat !important;
+  mask-mode: luminance !important;
+  background: var(--blue-700) !important;
+}
+html.itson-wrap img[src*="PS_CS_STEP01_DIS_ICN"],
+html.itson-wrap input[type="image"][src*="PS_CS_STEP01_DIS_ICN"] {
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%229.5%22 stroke-width=%221.8%22/%3E%3Ctext x=%2212%22 y=%2216.3%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-weight=%22700%22 font-size=%2212%22 fill=%22white%22 stroke=%22none%22%3E1%3C/text%3E%3C/svg%3E") center / 20px 20px no-repeat !important;
+  mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%229.5%22 stroke-width=%221.8%22/%3E%3Ctext x=%2212%22 y=%2216.3%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-weight=%22700%22 font-size=%2212%22 fill=%22white%22 stroke=%22none%22%3E1%3C/text%3E%3C/svg%3E") center / 20px 20px no-repeat !important;
+  mask-mode: luminance !important;
+  background: var(--muted) !important;
+}
+html.itson-wrap img[src*="PS_CS_STEP02_ENA_ICN"],
+html.itson-wrap input[type="image"][src*="PS_CS_STEP02_ENA_ICN"] {
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%2210%22 fill=%22white%22 stroke=%22none%22/%3E%3Ctext x=%2212%22 y=%2216.3%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-weight=%22700%22 font-size=%2212%22 fill=%22black%22 stroke=%22none%22%3E2%3C/text%3E%3C/svg%3E") center / 20px 20px no-repeat !important;
+  mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%2210%22 fill=%22white%22 stroke=%22none%22/%3E%3Ctext x=%2212%22 y=%2216.3%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-weight=%22700%22 font-size=%2212%22 fill=%22black%22 stroke=%22none%22%3E2%3C/text%3E%3C/svg%3E") center / 20px 20px no-repeat !important;
+  mask-mode: luminance !important;
+  background: var(--blue-700) !important;
+}
+html.itson-wrap img[src*="PS_CS_STEP02_INP_ICN"],
+html.itson-wrap input[type="image"][src*="PS_CS_STEP02_INP_ICN"] {
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%2210%22 fill=%22white%22 stroke=%22none%22/%3E%3Ctext x=%2212%22 y=%2216.3%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-weight=%22700%22 font-size=%2212%22 fill=%22black%22 stroke=%22none%22%3E2%3C/text%3E%3C/svg%3E") center / 20px 20px no-repeat !important;
+  mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%2210%22 fill=%22white%22 stroke=%22none%22/%3E%3Ctext x=%2212%22 y=%2216.3%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-weight=%22700%22 font-size=%2212%22 fill=%22black%22 stroke=%22none%22%3E2%3C/text%3E%3C/svg%3E") center / 20px 20px no-repeat !important;
+  mask-mode: luminance !important;
+  background: var(--blue-700) !important;
+}
+html.itson-wrap img[src*="PS_CS_STEP02_DIS_ICN"],
+html.itson-wrap input[type="image"][src*="PS_CS_STEP02_DIS_ICN"] {
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%229.5%22 stroke-width=%221.8%22/%3E%3Ctext x=%2212%22 y=%2216.3%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-weight=%22700%22 font-size=%2212%22 fill=%22white%22 stroke=%22none%22%3E2%3C/text%3E%3C/svg%3E") center / 20px 20px no-repeat !important;
+  mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%229.5%22 stroke-width=%221.8%22/%3E%3Ctext x=%2212%22 y=%2216.3%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-weight=%22700%22 font-size=%2212%22 fill=%22white%22 stroke=%22none%22%3E2%3C/text%3E%3C/svg%3E") center / 20px 20px no-repeat !important;
+  mask-mode: luminance !important;
+  background: var(--muted) !important;
+}
+html.itson-wrap img[src*="PS_CS_STEP03_ENA_ICN"],
+html.itson-wrap input[type="image"][src*="PS_CS_STEP03_ENA_ICN"] {
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%2210%22 fill=%22white%22 stroke=%22none%22/%3E%3Ctext x=%2212%22 y=%2216.3%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-weight=%22700%22 font-size=%2212%22 fill=%22black%22 stroke=%22none%22%3E3%3C/text%3E%3C/svg%3E") center / 20px 20px no-repeat !important;
+  mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%2210%22 fill=%22white%22 stroke=%22none%22/%3E%3Ctext x=%2212%22 y=%2216.3%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-weight=%22700%22 font-size=%2212%22 fill=%22black%22 stroke=%22none%22%3E3%3C/text%3E%3C/svg%3E") center / 20px 20px no-repeat !important;
+  mask-mode: luminance !important;
+  background: var(--blue-700) !important;
+}
+html.itson-wrap img[src*="PS_CS_STEP03_INP_ICN"],
+html.itson-wrap input[type="image"][src*="PS_CS_STEP03_INP_ICN"] {
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%2210%22 fill=%22white%22 stroke=%22none%22/%3E%3Ctext x=%2212%22 y=%2216.3%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-weight=%22700%22 font-size=%2212%22 fill=%22black%22 stroke=%22none%22%3E3%3C/text%3E%3C/svg%3E") center / 20px 20px no-repeat !important;
+  mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%2210%22 fill=%22white%22 stroke=%22none%22/%3E%3Ctext x=%2212%22 y=%2216.3%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-weight=%22700%22 font-size=%2212%22 fill=%22black%22 stroke=%22none%22%3E3%3C/text%3E%3C/svg%3E") center / 20px 20px no-repeat !important;
+  mask-mode: luminance !important;
+  background: var(--blue-700) !important;
+}
+html.itson-wrap img[src*="PS_CS_STEP03_DIS_ICN"],
+html.itson-wrap input[type="image"][src*="PS_CS_STEP03_DIS_ICN"] {
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%229.5%22 stroke-width=%221.8%22/%3E%3Ctext x=%2212%22 y=%2216.3%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-weight=%22700%22 font-size=%2212%22 fill=%22white%22 stroke=%22none%22%3E3%3C/text%3E%3C/svg%3E") center / 20px 20px no-repeat !important;
+  mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%229.5%22 stroke-width=%221.8%22/%3E%3Ctext x=%2212%22 y=%2216.3%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-weight=%22700%22 font-size=%2212%22 fill=%22white%22 stroke=%22none%22%3E3%3C/text%3E%3C/svg%3E") center / 20px 20px no-repeat !important;
+  mask-mode: luminance !important;
+  background: var(--muted) !important;
+}
+html.itson-wrap img[src*="PS_CS_STEP04_ENA_ICN"],
+html.itson-wrap input[type="image"][src*="PS_CS_STEP04_ENA_ICN"] {
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%2210%22 fill=%22white%22 stroke=%22none%22/%3E%3Ctext x=%2212%22 y=%2216.3%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-weight=%22700%22 font-size=%2212%22 fill=%22black%22 stroke=%22none%22%3E4%3C/text%3E%3C/svg%3E") center / 20px 20px no-repeat !important;
+  mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%2210%22 fill=%22white%22 stroke=%22none%22/%3E%3Ctext x=%2212%22 y=%2216.3%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-weight=%22700%22 font-size=%2212%22 fill=%22black%22 stroke=%22none%22%3E4%3C/text%3E%3C/svg%3E") center / 20px 20px no-repeat !important;
+  mask-mode: luminance !important;
+  background: var(--blue-700) !important;
+}
+html.itson-wrap img[src*="PS_CS_STEP04_INP_ICN"],
+html.itson-wrap input[type="image"][src*="PS_CS_STEP04_INP_ICN"] {
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%2210%22 fill=%22white%22 stroke=%22none%22/%3E%3Ctext x=%2212%22 y=%2216.3%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-weight=%22700%22 font-size=%2212%22 fill=%22black%22 stroke=%22none%22%3E4%3C/text%3E%3C/svg%3E") center / 20px 20px no-repeat !important;
+  mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%2210%22 fill=%22white%22 stroke=%22none%22/%3E%3Ctext x=%2212%22 y=%2216.3%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-weight=%22700%22 font-size=%2212%22 fill=%22black%22 stroke=%22none%22%3E4%3C/text%3E%3C/svg%3E") center / 20px 20px no-repeat !important;
+  mask-mode: luminance !important;
+  background: var(--blue-700) !important;
+}
+html.itson-wrap img[src*="PS_CS_STEP04_DIS_ICN"],
+html.itson-wrap input[type="image"][src*="PS_CS_STEP04_DIS_ICN"] {
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%229.5%22 stroke-width=%221.8%22/%3E%3Ctext x=%2212%22 y=%2216.3%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-weight=%22700%22 font-size=%2212%22 fill=%22white%22 stroke=%22none%22%3E4%3C/text%3E%3C/svg%3E") center / 20px 20px no-repeat !important;
+  mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Ccircle cx=%2212%22 cy=%2212%22 r=%229.5%22 stroke-width=%221.8%22/%3E%3Ctext x=%2212%22 y=%2216.3%22 text-anchor=%22middle%22 font-family=%22Arial%22 font-weight=%22700%22 font-size=%2212%22 fill=%22white%22 stroke=%22none%22%3E4%3C/text%3E%3C/svg%3E") center / 20px 20px no-repeat !important;
+  mask-mode: luminance !important;
+  background: var(--muted) !important;
+}
+
+/* iconos dentro de enlace = botón de icono */
+html.itson-wrap a:has(> img[src*="PT_PROMPT"]),
+html.itson-wrap a:has(> img[src*="PT_NAV_GO"]),
+html.itson-wrap a:has(> img[src*="PT_CALENDAR"]),
+html.itson-wrap a:has(> img[src*="PT_DOWNLOAD"]),
+html.itson-wrap a:has(> img[src*="PT_ADD"]),
+html.itson-wrap a:has(> img[src*="PT_DELETE"]) {
+  display: inline-grid !important;
+  place-items: center !important;
+  border-radius: var(--r-sm) !important;
+  transition: background .15s ease !important;
+}
+html.itson-wrap a:has(> img[src*="PT_PROMPT"]):hover,
+html.itson-wrap a:has(> img[src*="PT_NAV_GO"]):hover,
+html.itson-wrap a:has(> img[src*="PT_CALENDAR"]):hover,
+html.itson-wrap a:has(> img[src*="PT_DOWNLOAD"]):hover,
+html.itson-wrap a:has(> img[src*="PT_ADD"]):hover,
+html.itson-wrap a:has(> img[src*="PT_DELETE"]):hover { background: var(--blue-50) !important; }
+html.itson-wrap img.PSPROCESSING,
+html.itson-wrap img[src*="PT_PROCESSING"] {
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M12 3a9 9 0 1 0 9 9%22 stroke-width=%222.6%22/%3E%3C/svg%3E") center / 18px 18px no-repeat !important;
+  mask: url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22 fill=%22none%22 stroke=%22white%22 stroke-width=%222%22 stroke-linecap=%22round%22 stroke-linejoin=%22round%22%3E%3Cpath d=%22M12 3a9 9 0 1 0 9 9%22 stroke-width=%222.6%22/%3E%3C/svg%3E") center / 18px 18px no-repeat !important;
+  mask-mode: luminance !important;
+  background: var(--blue-700) !important;
+  animation: iw-spin .8s linear infinite !important;
+}
+html.itson-wrap div[id^="WAIT_win"] {
+  position: fixed !important;
+  top: 12px !important;
+  right: 16px !important;
+  z-index: 2147483000 !important;
+  width: 34px !important;
+  height: 34px !important;
+  display: grid !important;
+  place-items: center !important;
+  background: var(--surface) !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 999px !important;
+  box-shadow: var(--sh-2) !important;
+}
+html.itson-wrap div[id^="WAIT_win"] img { float: none !important; }
+@keyframes iw-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) {
+  html.itson-wrap img.PSPROCESSING { animation-duration: 2.4s !important; }
+}

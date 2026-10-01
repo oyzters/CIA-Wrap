@@ -1,0 +1,1019 @@
+/*
+ * ITSON Wrap - PANTALLAS DE COMPONENTE (frame TargetContent).
+ * Las 52 pantallas del menú (inscripción, finanzas, datos personales,
+ * calificaciones, trámites...) comparten estas clases de PeopleTools 8.
+ * PeopleSoft las pinta por clase con colores fijos (#fff de fondo, cabeceras
+ * rgb(115,130,181), pestañas hechas con GIFs), así que aquí se remapean a los
+ * tokens de content.css: con eso responden solas a claro/oscuro.
+ * Carga DESPUÉS de content.css.
+ */
+
+/* ---------- Contenedor de página -> tarjeta ---------- */
+html.itson-wrap table.PSPAGECONTAINER,
+html.itson-wrap table.PSSRCHPAGE {
+  background: var(--surface) !important;
+  border: 1px solid var(--line) !important;
+  border-radius: var(--r-lg) !important;
+  box-shadow: var(--sh-1) !important;
+  border-collapse: separate !important;
+}
+/* anidado: sin doble tarjeta */
+html.itson-wrap table.PSPAGECONTAINER table.PSPAGECONTAINER {
+  background: transparent !important; border: 0 !important; box-shadow: none !important;
+}
+
+/* fondos "invisibles" de PeopleSoft: que hereden la superficie */
+html.itson-wrap .PABACKGROUNDINVISIBLE,
+html.itson-wrap .PABACKGROUNDINVISIBLEWBO,
+html.itson-wrap .PSGROUPBOXNBO,
+html.itson-wrap .PSFRAMENBO,
+html.itson-wrap .PSLEVEL1GRIDNBO,
+html.itson-wrap .PSLEVEL3GRIDNBO,
+html.itson-wrap .PSLEVEL1SCROLLAREABODYNBO,
+html.itson-wrap .SSSGROUPBOXLEFTNBO,
+html.itson-wrap .SSSGROUPBOXRIGHTNBO,
+html.itson-wrap .PAGROUPBOXLABELINVISIBLE,
+html.itson-wrap .PAGROUPBOXLABELINVISIBLENBO {
+  background: transparent !important;
+  border-color: transparent !important;
+}
+
+/* ---------- Texto ---------- */
+html.itson-wrap .PATRANSACTIONTITLE,
+html.itson-wrap .PAPAGETITLE,
+html.itson-wrap .PSSRCHTITLE {
+  font-family: var(--font-head) !important;
+  font-size: 22px !important;
+  font-weight: 800 !important;
+  color: var(--ink) !important;
+  letter-spacing: -.02em !important;
+}
+html.itson-wrap .PSSRCHSUBTITLE { color: var(--muted) !important; }
+html.itson-wrap .PALEVEL0PRIMARY,
+html.itson-wrap .PALEVEL0SECONDARY {
+  font-family: var(--font-head) !important;
+  font-weight: 700 !important;
+  color: var(--ink) !important;
+}
+html.itson-wrap .PAPAGEINSTRUCTIONS,
+html.itson-wrap .PAADDITIONALINSTRUCTIONS,
+html.itson-wrap .PAEXAMPLE {
+  color: var(--muted) !important;
+  font-size: 13px !important;
+  line-height: 1.5 !important;
+}
+html.itson-wrap .PSEDITBOXLABEL,
+html.itson-wrap .PSDROPDOWNLABEL,
+html.itson-wrap .PSSRCHEDITBOXLABEL,
+html.itson-wrap .PSSRCHDROPDOWNLABEL,
+html.itson-wrap .SSSKEYTEXT {
+  color: var(--ink-2) !important;
+  font-weight: 600 !important;
+  font-size: 13px !important;
+}
+html.itson-wrap .PSEDITBOX_DISPONLY,
+html.itson-wrap .PSDROPDOWNLIST_DISPONLY,
+html.itson-wrap span.PSLONGEDITBOX,
+html.itson-wrap .PSTEXT {
+  color: var(--ink) !important;
+  font-size: 13px !important;
+}
+/* PeopleSoft fija 8pt (≈10px) en enlaces y textos sueltos: piso legible de 13px */
+html.itson-wrap a.PSHYPERLINK,
+html.itson-wrap .PSHYPERLINKDISABLED,
+html.itson-wrap .PABOLDTEXT,
+html.itson-wrap .SSSTEXTTURQBOLD,
+html.itson-wrap .SSSHYPERLINKBOLDSMALL,
+html.itson-wrap select, html.itson-wrap option {
+  font-size: 13px !important;
+}
+html.itson-wrap .PABOLDTEXT, html.itson-wrap .STRONG { color: var(--ink) !important; font-weight: 700 !important; }
+html.itson-wrap .SSSTEXTTURQBOLD { color: var(--blue-700) !important; font-weight: 700 !important; }
+html.itson-wrap .PSHYPERLINKDISABLED { color: var(--muted) !important; }
+html.itson-wrap .PSQRYHYPERLINK { color: var(--blue-700) !important; }
+html.itson-wrap .PSCHECKBOX, html.itson-wrap .PSRADIOBUTTON,
+html.itson-wrap .PSSRCHCHECKBOX { color: var(--ink-2) !important; }
+html.itson-wrap input[type="checkbox"], html.itson-wrap input[type="radio"] { accent-color: var(--fill-primary); }
+
+/* campos deshabilitados */
+html.itson-wrap input.PSEDITBOX_DISABLED,
+html.itson-wrap input:disabled,
+html.itson-wrap select:disabled {
+  background: var(--zebra) !important;
+  color: var(--muted) !important;
+}
+
+/* línea divisoria */
+html.itson-wrap .PSHORIZONTALRULE {
+  background: var(--line) !important;
+  border: 0 !important;
+  height: 1px !important;
+  color: var(--line) !important;
+}
+
+/* ---------- Cabeceras de grupo / rejilla -> encabezado de tarjeta ---------- */
+html.itson-wrap .PSGROUPBOXLABEL,
+html.itson-wrap .SSSGROUPBOXLEFTLABEL,
+html.itson-wrap .SSSGROUPBOXRIGHTLABEL,
+html.itson-wrap .PAGROUPDIVIDER,
+html.itson-wrap .PAGROUPBOXLABELLEVEL1,
+html.itson-wrap .PAGROUPBOXLABELLEVEL2,
+html.itson-wrap .PSLEVEL1GRIDLABEL,
+html.itson-wrap .PSLEVEL2GRIDLABEL,
+html.itson-wrap .PSLEVEL1SCROLLAREAHEADER,
+html.itson-wrap .PSSRCHRESULTSHDR,
+html.itson-wrap .PAGRIDHEADER {
+  background: var(--blue-50) !important;
+  background-image: none !important;
+  color: var(--current) !important;
+  font-family: var(--font-head) !important;
+  font-size: 13.5px !important;
+  font-weight: 700 !important;
+  padding: 8px 12px !important;
+  border: 0 !important;
+  border-bottom: 1px solid var(--line) !important;
+}
+html.itson-wrap .PSGROUPBOXLABEL *, html.itson-wrap .SSSGROUPBOXLEFTLABEL *,
+html.itson-wrap .SSSGROUPBOXRIGHTLABEL *, html.itson-wrap .PSLEVEL1GRIDLABEL *,
+html.itson-wrap .PSLEVEL2GRIDLABEL *, html.itson-wrap .PAGRIDHEADER * { color: var(--current) !important; }
+
+/* ---------- Cajas de grupo / marcos -> tarjeta ---------- */
+html.itson-wrap .PSGROUPBOXWBO,
+html.itson-wrap .PSFRAME,
+html.itson-wrap .PSFRAMEWBO,
+html.itson-wrap .SSSGROUPBOXLEFT,
+html.itson-wrap .SSSGROUPBOXLEFTWBO,
+html.itson-wrap .SSSGROUPBOXRIGHT,
+html.itson-wrap .SSSGROUPBOXRIGHTWBO,
+html.itson-wrap .SSSKEYFRAME,
+html.itson-wrap .SSSKEYFRAMEWBO,
+html.itson-wrap .PSLEVEL1SCROLLAREABODY,
+html.itson-wrap table.PSLEVEL2GRIDWBO,
+html.itson-wrap table.PSLEVEL1GRIDNBO,
+html.itson-wrap table.PSLEVEL3GRIDNBO {
+  background: var(--surface) !important;
+  border: 1px solid var(--line) !important;
+  border-radius: var(--r) !important;
+  border-collapse: separate !important;
+}
+/* los NBO que hacen de rejilla sí llevan marco; los demás NBO, no (arriba) */
+
+/* ---------- Rejillas: filas y cabeceras de columna ---------- */
+html.itson-wrap .PSLEVEL1GRIDROW,
+html.itson-wrap .PSLEVEL2GRIDROW,
+html.itson-wrap .PSLEVEL3GRIDROW,
+html.itson-wrap .PSLEVEL1GRIDODDROW,
+html.itson-wrap .PSLEVEL2GRIDODDROW,
+html.itson-wrap .PSLEVEL3GRIDODDROW {
+  background: var(--surface) !important;
+  color: var(--ink) !important;
+  border: 0 !important;
+  border-bottom: 1px solid var(--line) !important;
+  padding: 7px 10px !important;
+}
+html.itson-wrap .PSLEVEL1GRIDEVENROW,
+html.itson-wrap .PSLEVEL2GRIDEVENROW,
+html.itson-wrap .PSLEVEL3GRIDEVENROW {
+  background: var(--zebra) !important;
+  color: var(--ink) !important;
+  border: 0 !important;
+  border-bottom: 1px solid var(--line) !important;
+  padding: 7px 10px !important;
+}
+html.itson-wrap .PSLEVEL1GRIDCOLUMNHDR,
+html.itson-wrap .PSLEVEL2GRIDCOLUMNHDR,
+html.itson-wrap .PSLEVEL3GRIDCOLUMNHDR {
+  background: var(--zebra) !important;
+  background-image: none !important;
+  color: var(--muted) !important;
+  font-size: 11.5px !important;
+  font-weight: 700 !important;
+  letter-spacing: .04em !important;
+  text-transform: uppercase !important;
+  padding: 8px 10px !important;
+  border: 0 !important;
+  border-bottom: 1px solid var(--line) !important;
+}
+html.itson-wrap .PSLEVEL1GRIDCOLUMNHDR a,
+html.itson-wrap .PSLEVEL2GRIDCOLUMNHDR a,
+html.itson-wrap .PSLEVEL3GRIDCOLUMNHDR a,
+html.itson-wrap a.PSLEVEL2GRIDCOLUMNHDR,
+html.itson-wrap .PSLEVEL2GRIDCOLUMNHDRTXT { color: var(--muted) !important; text-decoration: none !important; }
+
+/* barra de navegación de la rejilla (Personalizar | Buscar | Ver Todo · 1-4 de 4) */
+html.itson-wrap .PSLEVEL1GRIDNAVIGATIONBAR,
+html.itson-wrap .PSLEVEL2GRIDNAVIGATIONBAR {
+  background: var(--surface) !important;
+  background-image: none !important;
+  color: var(--muted) !important;
+  border: 0 !important;
+  border-bottom: 1px solid var(--line) !important;
+  padding: 6px 10px !important;
+}
+html.itson-wrap .PSGRIDCOUNTER { color: var(--muted) !important; font-size: 12px !important; }
+html.itson-wrap .PSHEADERHYPERLINKD,
+html.itson-wrap a.PSHEADERHYPERLINKD { color: var(--blue-700) !important; font-size: 12px !important; font-weight: 600 !important; }
+html.itson-wrap .PSLEVEL1GRIDACTIVETAB { background: var(--blue-50) !important; color: var(--current) !important; }
+
+/* ---------- Pestañas de autoservicio (ssstab*): GIFs -> pastillas ---------- */
+/* las esquinas/bordes de pestaña son GIFs: PS_CS_TAB_* (autoservicio) y PT_TAB* (PeopleTools) */
+html.itson-wrap td:has(> img[src*="PS_CS_TAB_"]),
+html.itson-wrap td:has(> img[src*="PT_TAB"]) { display: none !important; }
+html.itson-wrap td.ssstabactive,
+html.itson-wrap td.ssstabinactive {
+  background: transparent !important;
+  background-image: none !important;
+  border: 0 !important;
+  border-radius: var(--r-sm) !important;
+  padding: 7px 14px !important;
+  white-space: nowrap !important;
+  transition: background .15s ease;
+}
+/* PeopleSoft fija width= en la activa (250px): que mida lo que su texto */
+html.itson-wrap td.ssstabactive, html.itson-wrap td.ssstabinactive { width: auto !important; }
+html.itson-wrap td.ssstabactive { background: var(--blue-50) !important; }
+html.itson-wrap td.ssstabinactive:hover { background: var(--blue-50) !important; }
+html.itson-wrap td.ssstabactive a.ssstabtext,
+html.itson-wrap td.ssstabactive .ssstabtext { color: var(--current) !important; font-weight: 700 !important; }
+html.itson-wrap a.ssstabtext,
+html.itson-wrap .ssstabtext {
+  color: var(--ink-2) !important;
+  font-size: 13.5px !important;
+  font-weight: 600 !important;
+  text-decoration: none !important;
+}
+html.itson-wrap td.ssstabinactive:hover a.ssstabtext { color: var(--blue-700) !important; }
+
+/* ---------- Pestañas de PeopleTools (PSACTIVETAB / PSINACTIVETAB) ---------- */
+html.itson-wrap .PSACTIVETAB,
+html.itson-wrap .PSINACTIVETAB {
+  background: transparent !important;
+  background-image: none !important;
+  border: 0 !important;
+  border-radius: var(--r-sm) !important;
+  padding: 7px 14px !important;
+  white-space: nowrap !important;
+}
+html.itson-wrap .PSACTIVETAB { background: var(--blue-50) !important; color: var(--current) !important; font-weight: 700 !important; }
+html.itson-wrap .PSACTIVETAB *, html.itson-wrap .PSACTIVETAB a { color: var(--current) !important; text-decoration: none !important; }
+html.itson-wrap .PSINACTIVETAB a { color: var(--ink-2) !important; font-weight: 600 !important; text-decoration: none !important; }
+html.itson-wrap .PSINACTIVETAB:hover { background: var(--blue-50) !important; }
+html.itson-wrap .PSNOIMAGE,
+html.itson-wrap .PSBOTTOMLINE,
+html.itson-wrap .PSRIGHTLEFTSCROLL {
+  background: transparent !important;
+  background-image: none !important;
+  border: 0 !important;
+}
+html.itson-wrap .PSBOTTOMLINE { border-bottom: 1px solid var(--line) !important; }
+
+/* ---------- Botones de autoservicio (SSSBUTTON_*) ---------- */
+/* el <span> envolvente traía su propio fondo/borde blanco */
+html.itson-wrap span.SSSBUTTON_ACTIONLINK,
+html.itson-wrap span.SSSBUTTON_CONFIRMLINK,
+html.itson-wrap span.SSSBUTTON_CANCELLINK,
+html.itson-wrap span.SSSBUTTON_CONFIRM {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  padding: 0 !important;
+}
+html.itson-wrap a.SSSBUTTON_ACTIONLINK,
+html.itson-wrap a.SSSBUTTON_CANCELLINK,
+html.itson-wrap input.SSSBUTTON_ACTIONLINK,
+html.itson-wrap input.SSSBUTTON_CANCELLINK {
+  height: auto !important;
+  width: auto !important;
+  overflow: visible !important;
+  box-shadow: none !important;
+  display: inline-block !important;
+  background: var(--surface) !important;
+  border: 1px solid var(--line) !important;
+  border-radius: var(--r-sm) !important;
+  color: var(--blue-700) !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  padding: 6px 12px !important;
+  text-decoration: none !important;
+  transition: background .15s ease, border-color .15s ease !important;
+}
+html.itson-wrap a.SSSBUTTON_ACTIONLINK:hover,
+html.itson-wrap a.SSSBUTTON_CANCELLINK:hover,
+html.itson-wrap input.SSSBUTTON_ACTIONLINK:hover,
+html.itson-wrap input.SSSBUTTON_CANCELLINK:hover {
+  background: var(--blue-50) !important;
+  border-color: var(--blue-300) !important;
+}
+html.itson-wrap a.SSSBUTTON_CONFIRMLINK,
+html.itson-wrap a.SSSBUTTON_CONFIRMLINKHOVER,
+html.itson-wrap input.SSSBUTTON_CONFIRM {
+  display: inline-block !important;
+  background: var(--fill-primary) !important;
+  border: 0 !important;
+  border-radius: var(--r-sm) !important;
+  color: #fff !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  padding: 7px 14px !important;
+  text-decoration: none !important;
+  box-shadow: var(--sh-1) !important;
+}
+html.itson-wrap a.SSSBUTTON_CONFIRMLINK:hover { background: var(--fill-primary-hi) !important; }
+/* el CSS base estilizaba la clase sin importar el elemento: el <span> quedaba como botón doble */
+html.itson-wrap span.SSSBUTTON_CONFIRMLINK { background: transparent !important; box-shadow: none !important; }
+
+/* ---------- Barra de herramientas (Guardar / Regresar / Notificar) ---------- */
+html.itson-wrap .PSHEADERTOOLBARFRAME {
+  background: transparent !important;
+  border: 0 !important;
+  border-top: 1px solid var(--line) !important;
+  padding-top: 8px !important;
+}
+html.itson-wrap input[class^="PSPUSHBUTTONTB"] {
+  background: var(--surface) !important;
+  background-image: none !important;
+  border: 1px solid var(--line) !important;
+  color: var(--blue-700) !important;
+  border-radius: var(--r-sm) !important;
+  padding: 6px 12px !important;
+  box-shadow: none !important;
+}
+html.itson-wrap input[class^="PSPUSHBUTTONTB"]:hover { background: var(--blue-50) !important; border-color: var(--blue-300) !important; }
+html.itson-wrap input.PSPUSHBUTTONTBSAVE,
+html.itson-wrap input.PSPUSHBUTTONTBSEARCH,
+html.itson-wrap input.PSPUSHBUTTONTBOK {
+  background: var(--fill-primary) !important;
+  border-color: transparent !important;
+  color: #fff !important;
+}
+html.itson-wrap input.PSPUSHBUTTONTBSAVE:hover,
+html.itson-wrap input.PSPUSHBUTTONTBSEARCH:hover,
+html.itson-wrap input.PSPUSHBUTTONTBOK:hover { background: var(--fill-primary-hi) !important; }
+
+/* ---------- Mensajes (info / éxito / alerta) ---------- */
+html.itson-wrap .SSSMSGINFOFRAME,
+html.itson-wrap .SSSMSGINFOFRAMEWBO {
+  background: var(--blue-50) !important;
+  border: 1px solid var(--blue-100) !important;
+  border-radius: var(--r) !important;
+}
+html.itson-wrap .SSSMSGSUCCESSFRAME,
+html.itson-wrap .SSSMSGSUCCESSFRAMEWBO {
+  background: color-mix(in srgb, #1f9d6e 12%, var(--surface)) !important;
+  border: 1px solid color-mix(in srgb, #1f9d6e 35%, var(--surface)) !important;
+  border-radius: var(--r) !important;
+}
+html.itson-wrap .SSSMSGALERTFRAME,
+html.itson-wrap .SSSMSGALERTFRAMEWBO {
+  background: var(--danger-50) !important;
+  border: 1px solid color-mix(in srgb, var(--danger) 35%, var(--surface)) !important;
+  border-radius: var(--r) !important;
+}
+html.itson-wrap .SSSMSGINFOTEXT,
+html.itson-wrap .SSSMSGSUCCESSTEXT,
+html.itson-wrap .SSSMSGALERTTEXT { color: var(--ink-2) !important; font-size: 13px !important; }
+
+/* ---------- Correcciones ---------- */
+/* PeopleSoft repite la clase de la celda en sus enlaces (a.PSLEVEL1GRIDLABEL,
+   a.PSLEVEL1GRIDCOLUMNHDR...): sin esto heredaban fondo y relleno de celda y
+   salían como cajitas dentro del encabezado. */
+html.itson-wrap a.PSGROUPBOXLABEL,
+html.itson-wrap a.PSLEVEL1GRIDLABEL,
+html.itson-wrap a.PSLEVEL2GRIDLABEL,
+html.itson-wrap a.PAGRIDHEADER,
+html.itson-wrap a.PSLEVEL1GRIDCOLUMNHDR,
+html.itson-wrap a.PSLEVEL2GRIDCOLUMNHDR,
+html.itson-wrap a.PSLEVEL3GRIDCOLUMNHDR,
+html.itson-wrap a.PSLEVEL1GRIDNAVIGATIONBAR,
+html.itson-wrap .PSLEVEL1GRIDLABEL a.PSHEADERHYPERLINKD,
+html.itson-wrap .PSLEVEL1GRIDLABEL a.PSHYPERLINK {
+  background: transparent !important;
+  padding: 0 !important;
+  border: 0 !important;
+}
+/* botones con height fijo en línea (Imprimir, Actualizar): que crezcan con el texto */
+html.itson-wrap input.PSPUSHBUTTON,
+html.itson-wrap input[type="button"],
+html.itson-wrap input[type="submit"] {
+  height: auto !important;
+  line-height: 1.25 !important;
+}
+
+/* ---------- Página: aire y barra de utilidades ---------- */
+html.itson-wrap.iw-content body { padding: 20px 28px 40px !important; }
+
+/* "Nueva Ventana | Ayuda | Personalizar Página": de enlaces subrayados con
+   barras de texto a acciones discretas tipo pastilla. Las "|" son nodos de
+   texto sueltos en la celda: se apagan con font-size 0 y los enlaces recuperan
+   su tamaño. */
+html.itson-wrap td:has(> a#NEWWIN),
+html.itson-wrap td:has(> a#HELP),
+html.itson-wrap td:has(> a#CUSTPAGE) {
+  font-size: 0 !important;
+  white-space: nowrap !important;
+  text-align: right !important;
+}
+html.itson-wrap a#NEWWIN,
+html.itson-wrap a#HELP,
+html.itson-wrap a#CUSTPAGE {
+  display: inline-block !important;
+  margin-left: 4px !important;
+  padding: 5px 11px !important;
+  border-radius: 999px !important;
+  font-size: 12.5px !important;
+  font-weight: 600 !important;
+  color: var(--muted) !important;
+  text-decoration: none !important;
+  transition: background .15s ease, color .15s ease !important;
+}
+html.itson-wrap a#NEWWIN:hover,
+html.itson-wrap a#HELP:hover,
+html.itson-wrap a#CUSTPAGE:hover {
+  background: var(--blue-50) !important;
+  color: var(--blue-700) !important;
+}
+
+/* enlaces: sin el subrayado permanente de PeopleSoft */
+html.itson-wrap.iw-content a,
+html.itson-wrap.iw-content a.PSHYPERLINK { text-decoration: none !important; }
+/* hover: resaltado de fondo, no subrayado. El box-shadow hace de relleno
+   para que el fondo respire alrededor del texto sin mover la caja ni el renglón */
+html.itson-wrap.iw-content a.PSHYPERLINK,
+html.itson-wrap.iw-content a[id^="DERIVED_"] {
+  border-radius: 4px;
+  transition: background .12s ease, box-shadow .12s ease, color .12s ease;
+}
+html.itson-wrap.iw-content a:hover,
+html.itson-wrap.iw-content a.PSHYPERLINK:hover { text-decoration: none !important; }
+html.itson-wrap.iw-content a.PSHYPERLINK:hover {
+  background: var(--blue-50) !important;
+  box-shadow: 0 0 0 3px var(--blue-50) !important;
+  color: var(--current) !important;
+}
+
+/* ---------- Controles nativos ---------- */
+/* select: sin la flecha del sistema; chevron propio en gris medio (legible en
+   ambos modos: un data-URI no puede leer tokens) */
+html.itson-wrap select {
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  background: var(--surface) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%237c8799' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m6 9 6 6 6-6'/%3E%3C/svg%3E") no-repeat right 10px center / 14px 14px !important;
+  padding-right: 32px !important;
+  cursor: pointer;
+}
+html.itson-wrap select:disabled { background-color: var(--zebra) !important; cursor: default; }
+html.itson-wrap select[multiple] { background-image: none !important; padding-right: 10px !important; }
+
+/* casillas y radios */
+html.itson-wrap input[type="checkbox"],
+html.itson-wrap input[type="radio"] {
+  -webkit-appearance: none !important;
+  appearance: none !important;
+  width: 17px !important;
+  height: 17px !important;
+  min-width: 17px !important;
+  margin: 0 6px 0 2px !important;
+  padding: 0 !important;
+  display: inline-grid !important;
+  place-content: center !important;
+  vertical-align: middle !important;
+  background: var(--surface) !important;
+  border: 1.5px solid color-mix(in srgb, var(--muted) 60%, var(--surface)) !important;
+  border-radius: 5px !important;
+  box-shadow: none !important;
+  cursor: pointer;
+  transition: background .12s ease, border-color .12s ease !important;
+}
+html.itson-wrap input[type="radio"] { border-radius: 50% !important; }
+html.itson-wrap input[type="checkbox"]:hover,
+html.itson-wrap input[type="radio"]:hover { border-color: var(--blue-500) !important; }
+html.itson-wrap input[type="checkbox"]:checked,
+html.itson-wrap input[type="radio"]:checked {
+  background: var(--fill-primary) !important;
+  border-color: var(--fill-primary) !important;
+}
+html.itson-wrap input[type="checkbox"]:checked::before {
+  content: "";
+  width: 11px;
+  height: 11px;
+  background: #fff;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m5 12.5 4.5 4.5L19 7.5'/%3E%3C/svg%3E") center / contain no-repeat;
+  mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='3.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='m5 12.5 4.5 4.5L19 7.5'/%3E%3C/svg%3E") center / contain no-repeat;
+}
+html.itson-wrap input[type="radio"]:checked::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #fff;
+}
+html.itson-wrap input[type="checkbox"]:focus-visible,
+html.itson-wrap input[type="radio"]:focus-visible { outline: 0 !important; box-shadow: 0 0 0 4px var(--focus-ring) !important; }
+html.itson-wrap input[type="checkbox"]:disabled,
+html.itson-wrap input[type="radio"]:disabled { opacity: .5; cursor: default; }
+
+/* columna de relleno que añade content.js (expandLayout) */
+html.itson-wrap td.iw-fill { padding: 0 !important; border: 0 !important; }
+
+/* =====================================================================
+   REJILLAS a ancho completo: tabla de datos (como las de iVirtual)
+   Ahora que ocupan toda la sección, la cebra y las celdas apretadas de
+   PeopleSoft se ven como hoja de cálculo. Más aire, hover de fila, sin cebra.
+   ===================================================================== */
+html.itson-wrap table.PSLEVEL1GRIDWBO,
+html.itson-wrap table.PSLEVEL1GRIDNBO,
+html.itson-wrap table.PSLEVEL2GRIDWBO,
+html.itson-wrap table.PSLEVEL3GRIDNBO,
+html.itson-wrap table.PSLEVEL1GRID {
+  border: 1px solid var(--line) !important;
+  border-radius: var(--r-lg) !important;
+  box-shadow: var(--sh-1) !important;
+  background: var(--surface) !important;
+}
+/* rejilla dentro de rejilla/caja: sin doble marco */
+html.itson-wrap [class*="GRIDROW"] table[class*="GRID"],
+html.itson-wrap [class*="GROUPBOX"] table.PSLEVEL3GRIDNBO { box-shadow: none !important; }
+
+html.itson-wrap .PSLEVEL1GRIDODDROW, html.itson-wrap .PSLEVEL1GRIDEVENROW, html.itson-wrap .PSLEVEL1GRIDROW,
+html.itson-wrap .PSLEVEL2GRIDODDROW, html.itson-wrap .PSLEVEL2GRIDEVENROW, html.itson-wrap .PSLEVEL2GRIDROW,
+html.itson-wrap .PSLEVEL3GRIDODDROW, html.itson-wrap .PSLEVEL3GRIDEVENROW, html.itson-wrap .PSLEVEL3GRIDROW {
+  background: var(--surface) !important;
+  padding: 11px 14px !important;
+  font-size: 13.5px !important;
+  line-height: 1.4 !important;
+  vertical-align: middle !important;
+  transition: background .12s ease;
+}
+html.itson-wrap tr:hover > .PSLEVEL1GRIDODDROW, html.itson-wrap tr:hover > .PSLEVEL1GRIDEVENROW, html.itson-wrap tr:hover > .PSLEVEL1GRIDROW,
+html.itson-wrap tr:hover > .PSLEVEL2GRIDODDROW, html.itson-wrap tr:hover > .PSLEVEL2GRIDEVENROW, html.itson-wrap tr:hover > .PSLEVEL2GRIDROW,
+html.itson-wrap tr:hover > .PSLEVEL3GRIDODDROW, html.itson-wrap tr:hover > .PSLEVEL3GRIDEVENROW, html.itson-wrap tr:hover > .PSLEVEL3GRIDROW {
+  background: color-mix(in srgb, var(--blue-500) 6%, var(--surface)) !important;
+}
+html.itson-wrap tr:last-child > [class*="GRIDODDROW"],
+html.itson-wrap tr:last-child > [class*="GRIDEVENROW"],
+html.itson-wrap tr:last-child > [class*="GRIDROW"] { border-bottom: 0 !important; }
+
+html.itson-wrap .PSLEVEL1GRIDCOLUMNHDR, html.itson-wrap .PSLEVEL2GRIDCOLUMNHDR, html.itson-wrap .PSLEVEL3GRIDCOLUMNHDR {
+  padding: 10px 14px !important;
+  font-size: 11px !important;
+  letter-spacing: .06em !important;
+  white-space: nowrap;
+}
+/* el texto de las celdas no es enlace: que no herede tamaños de 8pt */
+html.itson-wrap [class*="GRIDROW"] .PSEDITBOX_DISPONLY,
+html.itson-wrap [class*="GRIDROW"] .PSDROPDOWNLIST_DISPONLY,
+html.itson-wrap [class*="GRIDROW"] .PSLONGEDITBOX { font-size: 13.5px !important; }
+/* enlaces de celda (clase, sección): sin subrayado, con peso. El subrayado
+   venía del <span class="PSHYPERLINK"> que envuelve al <a> */
+html.itson-wrap span.PSHYPERLINK { text-decoration: none !important; }
+html.itson-wrap [class*="GRIDROW"] a.PSHYPERLINK { font-weight: 600 !important; }
+
+/* paginación: "Ver Todo | Primero ‹ 1-2 de 2 › Último" */
+html.itson-wrap .PSLEVEL1GRIDNAVIGATIONBAR a,
+html.itson-wrap .PSLEVEL1GRIDLABEL a.PSHEADERHYPERLINKD,
+html.itson-wrap td[class*="GRIDNAVIGATIONBAR"] a {
+  display: inline-block !important;
+  padding: 3px 9px !important;
+  border-radius: 999px !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  color: var(--blue-700) !important;
+  text-decoration: none !important;
+}
+html.itson-wrap .PSLEVEL1GRIDNAVIGATIONBAR a:hover,
+html.itson-wrap td[class*="GRIDNAVIGATIONBAR"] a:hover { background: var(--blue-50) !important; }
+html.itson-wrap .PSGRIDCOUNTER { font-weight: 600 !important; padding: 0 4px !important; }
+
+/* =====================================================================
+   ESTRUCTURA DE PÁGINA
+   ===================================================================== */
+/* pestañas como control segmentado: carril gris, activa en superficie */
+html.itson-wrap table:has(> tbody > tr > td.ssstabactive),
+html.itson-wrap table:has(> tbody > tr > td.PSACTIVETAB) {
+  background: var(--zebra) !important;
+  border: 1px solid var(--line) !important;
+  border-radius: var(--r) !important;
+  border-collapse: separate !important;
+  border-spacing: 3px !important;
+  margin: 4px 0 10px !important;
+}
+html.itson-wrap td.ssstabactive,
+html.itson-wrap td.PSACTIVETAB {
+  background: var(--surface) !important;
+  box-shadow: var(--sh-1) !important;
+}
+html.itson-wrap td.ssstabinactive:hover,
+html.itson-wrap td.PSINACTIVETAB:hover { background: color-mix(in srgb, var(--surface) 60%, transparent) !important; }
+
+/* nombre del alumno arriba de la página: rótulo discreto */
+html.itson-wrap .PALEVEL0PRIMARY {
+  font-family: var(--font-body) !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  color: var(--muted) !important;
+}
+/* título de la página: más presencia */
+html.itson-wrap .PATRANSACTIONTITLE,
+html.itson-wrap .PAPAGETITLE {
+  font-size: 26px !important;
+  line-height: 1.2 !important;
+}
+/* instrucciones: medida de lectura */
+html.itson-wrap .PAPAGEINSTRUCTIONS { display: inline-block; max-width: 78ch; }
+
+/* "»" junto a "Más...": botón de icono con borde */
+html.itson-wrap a:has(> img[src*="PT_NAV_GO"]) {
+  width: 36px !important;
+  height: 36px !important;
+  margin-left: 6px !important;
+  border: 1px solid var(--line) !important;
+  background: var(--surface) !important;
+  vertical-align: middle !important;
+}
+
+/* botones de autoservicio: sin las versalitas/minúsculas forzadas de PeopleSoft */
+html.itson-wrap .SSSBUTTON_ACTIONLINK, html.itson-wrap .SSSBUTTON_CONFIRMLINK,
+html.itson-wrap .SSSBUTTON_CANCELLINK, html.itson-wrap .SSSBUTTON_CONFIRM,
+html.itson-wrap input[type="button"], html.itson-wrap input[type="submit"] {
+  text-transform: none !important;
+  font-variant: normal !important;
+  letter-spacing: 0 !important;
+}
+
+/* =====================================================================
+   FICHA etiqueta/valor (rejillas cortas y anchas, ver kvGrids en content.js)
+   ===================================================================== */
+html.itson-wrap table.iw-kv,
+html.itson-wrap table.iw-kv > tbody { display: block !important; width: 100% !important; }
+html.itson-wrap table.iw-kv > tbody > tr {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  align-items: stretch !important;
+}
+html.itson-wrap table.iw-kv > tbody > tr.iw-kv-hdr { display: none !important; }
+html.itson-wrap table.iw-kv > tbody > tr > td { flex: 1 1 100%; }
+html.itson-wrap table.iw-kv > tbody > tr > td[data-iw-label] {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: flex-start !important;
+  gap: 3px !important;
+  flex: 1 1 150px !important;
+  min-width: 130px !important;
+  width: auto !important;
+  padding: 12px 16px !important;
+  border: 0 !important;
+  background: transparent !important;
+  text-align: left !important;
+}
+html.itson-wrap table.iw-kv > tbody > tr > td[data-iw-label]::before {
+  content: attr(data-iw-label);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: .06em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+html.itson-wrap table.iw-kv > tbody > tr > td.iw-kv-empty { display: none !important; }
+html.itson-wrap table.iw-kv tr:hover > td { background: transparent !important; }
+/* dos fichas seguidas (estado + sección de una misma clase): una sola tarjeta */
+html.itson-wrap table.iw-kv + table.iw-kv,
+html.itson-wrap td:has(> table.iw-kv) + td > table.iw-kv { border-top: 1px solid var(--line) !important; }
+
+/* botones de autoservicio: el <span> envolvente traía height/line-height fijos
+   (16px) y el botón con su padding se salía encima de lo de abajo */
+html.itson-wrap span.SSSBUTTON_ACTIONLINK,
+html.itson-wrap span.SSSBUTTON_CONFIRMLINK,
+html.itson-wrap span.SSSBUTTON_CANCELLINK,
+html.itson-wrap span.SSSBUTTON_CONFIRM {
+  display: inline-block !important;
+  height: auto !important;
+  line-height: normal !important;
+}
+
+/* =====================================================================
+   NAVEGACIÓN DENTRO DE LA PÁGINA
+   ===================================================================== */
+/* barra del pie de autoservicio ("Mi Horario Clases · Lista Previsiones ·
+   Buscar Clase · Añadir · Baja"): repite las pestañas con enlaces sueltos;
+   como chips de "accesos relacionados" se lee como lo que es */
+html.itson-wrap a[id^="DERIVED_SSSLINK_"] {
+  display: inline-block !important;
+  margin: 4px 6px 4px 0 !important;
+  padding: 6px 12px !important;
+  border: 1px solid var(--line) !important;
+  border-radius: 999px !important;
+  background: var(--surface) !important;
+  color: var(--ink-2) !important;
+  font-size: 12.5px !important;
+  font-weight: 600 !important;
+  white-space: nowrap !important;
+  text-decoration: none !important;
+  transition: background .15s ease, border-color .15s ease, color .15s ease !important;
+}
+html.itson-wrap a[id^="DERIVED_SSSLINK_"]:hover {
+  background: var(--blue-50) !important;
+  border-color: var(--blue-300) !important;
+  color: var(--blue-700) !important;
+}
+/* salto rápido "Más...": mismo alto que el botón de ir */
+html.itson-wrap select[name^="DERIVED_SSTSNAV_SSTS_MAIN_GOTO"] {
+  min-width: 190px !important;
+  height: 36px !important;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
+  vertical-align: middle !important;
+}
+
+/* =====================================================================
+   SOLAPES: causas encontradas con el detector en las 52 pantallas
+   PeopleSoft dimensiona cajas en px para su letra de 8pt; con la tipografía
+   y el aire del wrap el contenido ya no cabe y se monta sobre lo siguiente.
+   ===================================================================== */
+/* 1. <div style="height:24px"> alrededor de las pestañas (8 pantallas de
+   Inscripción/Finanzas): el título se subía encima. Solo los que no son área
+   de desplazamiento (esos llevan overflow y su alto sí importa). */
+html.itson-wrap.iw-content div[style*="height"]:not([style*="overflow"]) {
+  height: auto !important;
+}
+/* 2. enlaces en celdas con nowrap más angostas que el texto (9 pantallas,
+   p. ej. "Mi solicitud de Cambios de Programa" en el Centro de Alumnado):
+   que partan línea en vez de salirse de su caja */
+html.itson-wrap.iw-content a.PSHYPERLINK,
+html.itson-wrap.iw-content span.PSHYPERLINK {
+  white-space: normal !important;
+  overflow-wrap: anywhere;
+}
+/* 3. (botones SSSBUTTON con span de alto fijo: ver más arriba) */
+
+/* Esquinas: las cajas ya no llevan overflow:hidden (recortaba títulos y
+   botones que no cabían, p. ej. "1. Selección de Clases ... Explorar Catá").
+   El encabezado de la caja redondea sus propias esquinas superiores. */
+html.itson-wrap tr:first-child > .PSGROUPBOXLABEL,
+html.itson-wrap tr:first-child > .SSSGROUPBOXLEFTLABEL,
+html.itson-wrap tr:first-child > .SSSGROUPBOXRIGHTLABEL,
+html.itson-wrap tr:first-child > .PSLEVEL1GRIDLABEL,
+html.itson-wrap tr:first-child > .PSLEVEL2GRIDLABEL,
+html.itson-wrap tr:first-child > .PAGRIDHEADER {
+  border-radius: calc(var(--r) - 1px) calc(var(--r) - 1px) 0 0 !important;
+}
+html.itson-wrap tr:first-child > [class*="GRIDCOLUMNHDR"]:first-child { border-top-left-radius: calc(var(--r-lg) - 1px) !important; }
+html.itson-wrap tr:first-child > [class*="GRIDCOLUMNHDR"]:last-child { border-top-right-radius: calc(var(--r-lg) - 1px) !important; }
+
+/* PSGROUPBOX sin rótulo = agrupador invisible (p. ej. el encabezado de
+   "Añadir Clases"): no es una tarjeta. Solo los que traen rótulo lo son. */
+html.itson-wrap table.PSGROUPBOX:not(:has(> tbody > tr > td.PSGROUPBOXLABEL)) {
+  background: transparent !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+
+/* jerarquía de títulos: el de la transacción manda, el de la página acompaña */
+html.itson-wrap .PAPAGETITLE { font-size: 19px !important; font-weight: 700 !important; }
+html.itson-wrap .PATRANSACTIONTITLE { font-size: 26px !important; }
+
+/* listas repetidas sin clases de rejilla (catálogo de cursos, etc.):
+   las marca content.js (listRows) por sus enlaces numerados $0, $1, $2... */
+html.itson-wrap table.iw-rows > tbody > tr > td[rowspan],
+html.itson-wrap table.iw-rows > tbody > tr.iw-row > td {
+  padding: 9px 12px !important;
+  border-bottom: 1px solid var(--line) !important;
+  vertical-align: middle !important;
+  transition: background .12s ease;
+}
+html.itson-wrap table.iw-rows > tbody > tr.iw-row:hover > td {
+  background: color-mix(in srgb, var(--blue-500) 6%, var(--surface)) !important;
+}
+html.itson-wrap table.iw-rows > tbody > tr.iw-row-hdr > td {
+  padding: 8px 12px !important;
+  border-bottom: 1px solid var(--line) !important;
+}
+html.itson-wrap table.iw-rows > tbody > tr.iw-row-hdr > td,
+html.itson-wrap table.iw-rows > tbody > tr.iw-row-hdr > td * {
+  color: var(--muted) !important;
+  font-size: 11px !important;
+  font-weight: 700 !important;
+  letter-spacing: .06em !important;
+  text-transform: uppercase !important;
+}
+
+/* chips de accesos relacionados: nunca partir la palabra ("Aña / dir").
+   Gana a la regla general de enlaces que sí deja partir línea. */
+html.itson-wrap.iw-content a[id^="DERIVED_SSSLINK_"],
+html.itson-wrap.iw-content span.PSHYPERLINK:has(> a[id^="DERIVED_SSSLINK_"]) {
+  white-space: nowrap !important;
+  overflow-wrap: normal !important;
+}
+
+/* campos que crecen con su contenido (fitInputs en content.js) */
+html.itson-wrap input.iw-fit {
+  field-sizing: content;
+  width: auto !important;
+  max-width: 100%;
+  padding-left: 9px !important;
+  padding-right: 9px !important;
+}
+
+/* =====================================================================
+   CALENDARIO SEMANAL (calendarize en content.js)
+   ===================================================================== */
+html.itson-wrap table.iw-cal [class*="GRIDROW"] {
+  padding: 4px 5px !important;
+  vertical-align: top !important;
+  border-right: 1px solid var(--line) !important;
+  min-width: 120px;
+}
+html.itson-wrap table.iw-cal tr:hover > [class*="GRIDROW"] { background: var(--surface) !important; }
+/* columna de horas */
+html.itson-wrap table.iw-cal tr > [class*="GRIDROW"]:first-child {
+  width: 78px !important;
+  min-width: 78px;
+  color: var(--muted) !important;
+  font-size: 12px !important;
+  font-weight: 600 !important;
+  text-align: right !important;
+  white-space: nowrap;
+  padding-right: 12px !important;
+}
+html.itson-wrap table.iw-cal tr > [class*="GRIDROW"]:first-child * { color: var(--muted) !important; font-size: 12px !important; }
+html.itson-wrap table.iw-cal th[class*="GRIDCOLUMNHDR"] { text-align: center !important; }
+
+html.itson-wrap span.iw-ev {
+  --ev: hsl(var(--ev-h) 62% 42%);
+  display: block !important;
+  margin: 2px 0 !important;
+  padding: 7px 9px 7px 11px !important;
+  border-left: 3px solid var(--ev) !important;
+  border-radius: var(--r-sm) !important;
+  background: color-mix(in srgb, var(--ev) 12%, var(--surface)) !important;
+  color: var(--ink-2) !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  line-height: 1.4 !important;
+  text-align: left !important;
+}
+html.iw-dark span.iw-ev { --ev: hsl(var(--ev-h) 70% 66%); background: color-mix(in srgb, var(--ev) 16%, var(--surface)) !important; }
+html.itson-wrap span.iw-ev::first-line { font-weight: 800; color: var(--ink); }
+
+/* =====================================================================
+   PATRONES DEL BARRIDO VISUAL (69 pantallas)
+   ===================================================================== */
+/* barra "Nueva Ventana | Ayuda | Personalizar Página": la tabla reparte
+   80/10/10 % y los enlaces no cabían en su 10% (se salían por la derecha) */
+html.itson-wrap table:has(> tbody > tr > td > a#NEWWIN) > tbody > tr > td,
+html.itson-wrap table:has(> tbody > tr > td > a#HELP) > tbody > tr > td { width: auto !important; }
+html.itson-wrap table:has(> tbody > tr > td > a#NEWWIN) > tbody > tr > td:first-child,
+html.itson-wrap table:has(> tbody > tr > td > a#HELP) > tbody > tr > td:first-child { width: 100% !important; }
+
+/* títulos que en realidad son avisos largos (longTitles en content.js) */
+html.itson-wrap .PAPAGETITLE.iw-notice,
+html.itson-wrap .PATRANSACTIONTITLE.iw-notice {
+  display: block !important;
+  margin: 6px 0 12px !important;
+  padding: 12px 16px 12px 44px !important;
+  max-width: 82ch;
+  border: 1px solid var(--blue-100) !important;
+  border-radius: var(--r) !important;
+  background: var(--blue-50) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231a73c7' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='12' cy='12' r='9'/%3E%3Cpath d='M12 11v6M12 7.5v.1'/%3E%3C/svg%3E") no-repeat 15px 13px / 18px 18px !important;
+  font-family: var(--font-body) !important;
+  font-size: 13.5px !important;
+  font-weight: 500 !important;
+  line-height: 1.55 !important;
+  letter-spacing: 0 !important;
+  text-align: left !important;
+  color: var(--ink-2) !important;
+}
+html.itson-wrap .iw-notice * { font-size: inherit !important; font-weight: inherit !important; text-align: left !important; }
+
+/* foto del alumno: avatar, no imagen que llena la celda */
+html.itson-wrap img[src*="EMPL_PHOTO"] {
+  width: 112px !important;
+  max-width: 112px !important;
+  height: auto !important;
+  border-radius: var(--r) !important;
+  border: 1px solid var(--line) !important;
+  box-shadow: var(--sh-1) !important;
+  object-fit: cover !important;
+}
+
+/* avisos de autoservicio: a lo ancho y con icono */
+html.itson-wrap table.SSSMSGINFOFRAME,
+html.itson-wrap table.SSSMSGINFOFRAMEWBO,
+html.itson-wrap table.SSSMSGALERTFRAME,
+html.itson-wrap table.SSSMSGALERTFRAMEWBO,
+html.itson-wrap table.SSSMSGSUCCESSFRAME,
+html.itson-wrap table.SSSMSGSUCCESSFRAMEWBO { width: 100% !important; max-width: 760px; }
+html.itson-wrap .SSSMSGINFOTEXT,
+html.itson-wrap .SSSMSGALERTTEXT,
+html.itson-wrap .SSSMSGSUCCESSTEXT {
+  display: block !important;
+  padding: 4px 6px 4px 28px !important;
+  text-align: left !important;
+  font-weight: 500 !important;
+  background: no-repeat 2px center / 17px 17px;
+}
+html.itson-wrap .SSSMSGINFOTEXT { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231a73c7' stroke-width='2' stroke-linecap='round'%3E%3Ccircle cx='12' cy='12' r='9'/%3E%3Cpath d='M12 11v6M12 7.5v.1'/%3E%3C/svg%3E") !important; }
+html.itson-wrap .SSSMSGALERTTEXT { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d0453a' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M12 3 2.5 20h19z'/%3E%3Cpath d='M12 10v4.5M12 17.2v.1'/%3E%3C/svg%3E") !important; }
+html.itson-wrap .SSSMSGSUCCESSTEXT { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%231f9d6e' stroke-width='2.2' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='12' cy='12' r='9'/%3E%3Cpath d='m8 12.5 2.8 2.8L16.5 9.5'/%3E%3C/svg%3E") !important; }
+html.itson-wrap .SSSMSGINFOFRAME td, html.itson-wrap .SSSMSGALERTFRAME td, html.itson-wrap .SSSMSGSUCCESSFRAME td { text-align: left !important; }
+
+/* pestañas de PeopleTools: la celda de línea inferior dejaba una mancha */
+html.itson-wrap td:has(> img[src*="PT_TAB_BOTTOM_LINE"]),
+html.itson-wrap td.PSNOIMAGE:empty { display: none !important; }
+
+/* =====================================================================
+   CENTRO DE ALUMNADO -> DASHBOARD (buildStudentCenter en content.js)
+   ===================================================================== */
+html.iw-dash-built form > *:not(#iw-dash) { display: none !important; }
+
+#iw-dash { font-family: var(--font-body); color: var(--ink); max-width: 1500px; }
+#iw-dash .iw-dash-hd { margin: 0 0 18px; }
+#iw-dash .iw-dash-eyebrow { margin: 0 0 4px; font-size: 13px; font-weight: 600; color: var(--muted); }
+#iw-dash h1 { margin: 0; font-family: var(--font-head) !important; font-size: var(--fs-title); font-weight: 800; letter-spacing: -.02em; }
+
+/* indicadores */
+#iw-dash .iw-kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin: 0 0 18px; }
+#iw-dash .iw-kpi {
+  --k: var(--blue-700);
+  display: flex; flex-direction: column; gap: 4px; text-align: left;
+  padding: 16px 18px; border: 1px solid var(--line); border-radius: var(--r-lg);
+  background: var(--surface); box-shadow: var(--sh-1); font: inherit; color: inherit;
+  position: relative; overflow: hidden;
+}
+#iw-dash button.iw-kpi { cursor: pointer; transition: transform .12s ease, box-shadow .18s ease, border-color .18s ease; }
+#iw-dash button.iw-kpi:hover { transform: translateY(-2px); border-color: var(--blue-300); box-shadow: var(--sh-2); }
+#iw-dash .iw-kpi::before { content: ""; position: absolute; left: 0; top: 0; bottom: 0; width: 4px; background: var(--k); }
+#iw-dash .iw-kpi-ok { --k: var(--ok); }
+#iw-dash .iw-kpi-warn { --k: var(--warn); }
+#iw-dash .iw-kpi-danger { --k: var(--danger); }
+#iw-dash .iw-kpi-l { font-size: 11.5px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+#iw-dash .iw-kpi-v { font-family: var(--font-head); font-size: 24px; font-weight: 800; letter-spacing: -.01em; color: var(--ink); }
+#iw-dash .iw-kpi-s { font-size: 12.5px; color: var(--muted); }
+#iw-dash button.iw-kpi .iw-kpi-s { color: var(--blue-700); font-weight: 600; }
+
+/* columnas */
+#iw-dash .iw-dash-cols { display: grid; grid-template-columns: minmax(0, 1fr) 300px; gap: 18px; align-items: start; }
+#iw-dash .iw-dash-main, #iw-dash .iw-dash-side { display: flex; flex-direction: column; gap: 16px; min-width: 0; }
+#iw-dash .iw-dash-row { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px; }
+@media (max-width: 1100px) { #iw-dash .iw-dash-cols { grid-template-columns: 1fr; } }
+
+/* tarjetas propias */
+#iw-dash .iw-dcard { background: var(--surface); border: 1px solid var(--line); border-radius: var(--r-lg); box-shadow: var(--sh-1); }
+#iw-dash .iw-dcard-h { margin: 0; padding: 14px 18px 0; font-family: var(--font-head) !important; font-size: 15.5px; font-weight: 800; color: var(--ink) !important; }
+#iw-dash .iw-dcard-b { padding: 12px 18px 16px; }
+#iw-dash .iw-dcard-f { display: flex; align-items: center; gap: 8px; padding: 10px 18px 14px; border-top: 1px solid var(--line); }
+#iw-dash .iw-legend { display: flex; flex-wrap: wrap; gap: 6px 18px; margin: 0 0 10px; font-size: 12.5px; color: var(--muted); }
+#iw-dash .iw-legend span { display: inline-flex; align-items: center; gap: 4px; }
+#iw-dash .iw-dcard-sched table[class*="GRID"] { width: 100% !important; box-shadow: none !important; }
+
+/* accesos agrupados */
+#iw-dash .iw-acc { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 6px 24px; }
+#iw-dash .iw-acc-g h3 { margin: 4px 0 6px; font-family: var(--font-body) !important; font-size: 11.5px; font-weight: 700; letter-spacing: .06em; text-transform: uppercase; color: var(--muted) !important; }
+#iw-dash .iw-acc-l { display: flex; flex-direction: column; }
+#iw-dash .iw-acc-l a {
+  display: block !important; padding: 7px 10px !important; margin: 0 -10px !important;
+  border-radius: var(--r-sm) !important; box-shadow: none !important;
+  font-size: 13.5px !important; font-weight: 500 !important; color: var(--ink-2) !important;
+}
+#iw-dash .iw-acc-l a:hover { background: var(--blue-50) !important; color: var(--blue-700) !important; }
+#iw-dash .iw-jump select { flex: 1; max-width: 320px; }
+
+/* cajas originales movidas (Finanzas, Plan de Pagos, laterales) */
+#iw-dash table.iw-dbox {
+  width: 100% !important; margin: 0 !important;
+  background: var(--surface) !important; border: 1px solid var(--line) !important;
+  border-radius: var(--r-lg) !important; box-shadow: var(--sh-1) !important;
+}
+#iw-dash table.iw-dbox > tbody > tr:first-child > td[class*="LABEL"] {
+  background: transparent !important; border-bottom: 1px solid var(--line) !important;
+  padding: 13px 16px !important; font-size: 14.5px !important; font-weight: 800 !important;
+  text-transform: none !important; letter-spacing: 0 !important; color: var(--ink) !important;
+}
+#iw-dash table.iw-dbox > tbody > tr:first-child > td[class*="LABEL"] * { color: var(--ink) !important; }
+#iw-dash .iw-dash-side table.iw-dbox a { display: inline-block; padding: 3px 0; font-size: 13px !important; }
+/* cajas de grupo anidadas dentro de las movidas: sin doble marco */
+#iw-dash table.iw-dbox table[class*="GROUPBOX"] { box-shadow: none !important; }
+
+/* dashboard: rejilla del horario */
+#iw-dash .iw-hide { display: none !important; }
+#iw-dash .iw-dcard-sched tr > *:nth-child(-n+2) { width: 44px !important; text-align: center !important; }
+#iw-dash .iw-dcard-sched [class*="GRIDROW"] { text-align: left !important; }
+#iw-dash .iw-dcard-sched tr > [class*="GRIDROW"]:nth-child(3),
+#iw-dash .iw-dcard-sched tr > [class*="GRIDROW"]:nth-child(3) * { color: var(--ink) !important; font-weight: 600 !important; }
+#iw-dash select { min-width: 220px !important; }
+
+/* botones: sin versalitas en ningún caso (PeopleSoft las fija por clase) */
+html.itson-wrap input[type="button"], html.itson-wrap input[type="submit"],
+html.itson-wrap a[class*="BUTTON"], html.itson-wrap span[class*="BUTTON"], html.itson-wrap button {
+  font-variant: normal !important;
+  font-variant-caps: normal !important;
+  text-transform: none !important;
+}
+/* botones deshabilitados: neutros, no el verde/amarillo de PeopleSoft */
+html.itson-wrap input[type="button"]:disabled, html.itson-wrap input[type="submit"]:disabled,
+html.itson-wrap input[class*="DISABLED"], html.itson-wrap a[class*="DISABLED"][class*="BUTTON"] {
+  background: var(--zebra) !important;
+  color: var(--muted) !important;
+  border: 1px solid var(--line) !important;
+  box-shadow: none !important;
+  cursor: not-allowed !important;
+}
