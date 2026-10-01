@@ -558,6 +558,8 @@
   // Al desactivar la extensión, la maqueta vuelve a la original al recargar.
   var EDGE_SLACK = 40;   // px de columnas separadoras que aún cuentan como "borde"
   function isLayoutTable(t){
+    // las rejillas son datos, no maquetación: sus columnas no se tocan
+    if(/GRID/.test(t.className)) return false;
     if(t.closest('[class*=GRIDROW],[class*=GRIDODDROW],[class*=GRIDEVENROW]')) return false;
     if(t.querySelector(':scope > tbody > tr > td.ssstabactive, :scope > tbody > tr > td.PSACTIVETAB, :scope > tbody > tr > td > img[src*="_TAB"]')) return false;
     var r=t.querySelector(':scope > tbody > tr'); if(!r) return false;
@@ -590,8 +592,9 @@
   // columnas usadas por alguna celda con contenido (respetando rowspan/colspan)
   function deadColumns(rows, N){
     var used=[], occ=[];
+    // la primera fila suele ser solo separadores con ancho, pero a veces ya
+    // trae contenido: también cuenta (si no, su columna se colapsaba a 6px)
     rows.forEach(function(tr, ri){
-      if(ri===0) return;
       occ[ri]=occ[ri]||[];
       var col=0;
       [].forEach.call(tr.children, function(td){
