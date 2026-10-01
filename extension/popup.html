@@ -2,25 +2,30 @@
 <html lang="es">
 <head>
 <meta charset="utf-8">
+<!--
+  Popup compartido por CIA Wrap e iVirtual Wrap: mismo archivo en las dos
+  extensiones. Lo que cambia (nombre, portal, claves de storage) vive en el
+  bloque CONFIG de popup.js; las novedades, en changelog.js.
+-->
 <style>
-  /* Mismo lenguaje que iVirtual Wrap: Figtree, azules ITSON y esquinas suaves. */
+  /* Mismo lenguaje que los wraps: Figtree, azules ITSON y esquinas suaves. */
   :root{
-    --blue-700:#5b9dff; --blue-600:#8bbaff; --blue-50:rgba(91,157,255,.14); --fill:#0b5cad;
-    --ink:#f4f6f9; --ink-2:#c7cdd8; --muted:#93a0b0; --line:rgba(255,255,255,.1); --bg:#14171d;
-    --off:#3a414d;
-  }
-  :root[data-theme="light"]{
-    --blue-700:#0b5cad; --blue-600:#1461bd; --blue-50:#eef5fc;
+    --blue-700:#0b5cad; --blue-600:#1461bd; --blue-50:#eef5fc; --fill:#0b5cad;
     --ink:#0f1b2d; --ink-2:#38465c; --muted:#6b7891; --line:#e5eaf2; --bg:#fff;
-    --off:#c7ced6;
+    --off:#c7ced6; --seg:#fff;
+  }
+  :root[data-theme="dark"]{
+    --blue-700:#5b9dff; --blue-600:#8bbaff; --blue-50:rgba(91,157,255,.14);
+    --ink:#f4f6f9; --ink-2:#c7cdd8; --muted:#93a0b0; --line:rgba(255,255,255,.1); --bg:#14171d;
+    --off:#3a414d; --seg:#191d25;
   }
   *{box-sizing:border-box}
-  body{ width:268px; margin:0; padding:16px;
+  body{ width:288px; margin:0; padding:16px;
     font:14px/1.45 "Figtree",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
     background:var(--bg); color:var(--ink); -webkit-font-smoothing:antialiased; }
 
   .brand{ display:flex; align-items:center; gap:10px; margin-bottom:14px; }
-  .brand img{ width:34px; height:34px; border-radius:9px; object-fit:cover; }
+  .brand img{ width:34px; height:34px; border-radius:9px; }
   h1{ font-size:15px; font-weight:800; letter-spacing:-.01em; margin:0; }
   p.sub{ margin:1px 0 0; font-size:12px; color:var(--muted); }
 
@@ -37,29 +42,47 @@
   .sw[aria-checked="true"]::before{ transform:translateX(20px); }
   .sw:focus-visible{ outline:0; box-shadow:0 0 0 3px rgba(26,115,199,.35); }
 
-  .seg{ display:flex; gap:2px; padding:2px; border-radius:999px; background:var(--bg); border:1px solid var(--line); }
+  .seg{ display:flex; gap:2px; padding:2px; border-radius:999px; background:var(--seg); border:1px solid var(--line); }
   .seg button{ border:none; background:none; cursor:pointer; color:var(--muted); font:inherit; font-size:12px; font-weight:600;
-    padding:4px 10px; border-radius:999px; display:flex; align-items:center; gap:5px; transition:background .15s, color .15s; }
-  .seg button svg{ width:13px; height:13px; }
+    padding:4px 9px; border-radius:999px; transition:background .15s, color .15s; }
   .seg button:hover{ color:var(--blue-700); }
   .seg button.on{ background:var(--fill); color:#fff; }
+
+  .open{ display:flex; align-items:center; justify-content:center; gap:7px; width:100%; margin-top:10px;
+    padding:10px 14px; border:0; border-radius:12px; background:var(--fill); color:#fff;
+    font:inherit; font-size:13.5px; font-weight:700; cursor:pointer; transition:background .15s; }
+  .open:hover{ background:var(--blue-600); }
+  :root[data-theme="dark"] .open:hover{ background:#1461bd; }
+  .open svg{ width:15px; height:15px; }
+
+  details.news{ margin-top:10px; border:1px solid var(--line); border-radius:12px; }
+  details.news summary{ list-style:none; cursor:pointer; display:flex; align-items:center; gap:8px;
+    padding:10px 14px; font-size:13px; font-weight:700; color:var(--ink-2); }
+  details.news summary::-webkit-details-marker{ display:none; }
+  details.news summary .ver{ margin-left:auto; font-size:11.5px; font-weight:600; color:var(--muted); }
+  details.news summary .new{ display:none; padding:1px 7px; border-radius:999px; background:var(--fill); color:#fff; font-size:10.5px; font-weight:700; }
+  details.news.unseen summary .new{ display:inline-block; }
+  details.news ul{ margin:0; padding:0 14px 12px 30px; font-size:12.5px; color:var(--ink-2); }
+  details.news li{ margin:4px 0; }
 
   .state{ display:flex; align-items:center; gap:7px; margin-top:12px; font-size:12px; color:var(--muted); }
   .dot{ width:8px; height:8px; border-radius:999px; background:var(--off); }
   body.on .dot{ background:var(--blue-600); }
   .state b{ color:var(--blue-700); font-weight:700; }
 
-  footer{ margin-top:14px; padding-top:11px; border-top:1px solid var(--line); font-size:11.5px; color:var(--muted); }
+  footer{ display:flex; flex-wrap:wrap; gap:4px 10px; margin-top:12px; padding-top:11px; border-top:1px solid var(--line);
+    font-size:11.5px; color:var(--muted); }
   footer a{ color:var(--blue-700); font-weight:600; text-decoration:none; }
   footer a:hover{ text-decoration:underline; }
+  footer .v{ margin-left:auto; }
 </style>
 </head>
 <body>
   <div class="brand">
-    <img src="logo.png" alt="">
+    <img id="icon" src="" alt="">
     <div>
-      <h1>ITSON CIA Wrap</h1>
-      <p class="sub">Interfaz moderna para el portal CIA</p>
+      <h1 id="name"></h1>
+      <p class="sub" id="sub"></p>
     </div>
   </div>
 
@@ -70,16 +93,30 @@
 
   <div class="card">
     <span class="label">Tema</span>
-    <div class="seg">
-      <button data-theme="light"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4 12H2M22 12h-2M5 5l1.4 1.4M17.6 17.6 19 19M5 19l1.4-1.4M17.6 6.4 19 5"/></svg>Claro</button>
-      <button data-theme="dark" class="on"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg>Oscuro</button>
+    <div class="seg" role="radiogroup" aria-label="Tema">
+      <button data-theme="light">Claro</button>
+      <button data-theme="dark">Oscuro</button>
+      <button data-theme="auto">Auto</button>
     </div>
   </div>
 
+  <button class="open" id="open" type="button"></button>
+
+  <details class="news" id="news">
+    <summary>Novedades <span class="new">Nuevo</span><span class="ver" id="newsVer"></span></summary>
+    <ul id="newsList"></ul>
+  </details>
+
   <div class="state"><span class="dot"></span>Estado: <b id="st">Activada</b></div>
 
-  <footer>Corre sobre tu sesión, sin servidor · <a href="https://github.com/oyzters/CIA-Wrap" target="_blank" rel="noopener">Código</a></footer>
+  <footer>
+    <span>Corre sobre tu sesión, sin servidor</span>
+    <a id="site" href="#" target="_blank" rel="noopener">Sitio</a>
+    <a id="code" href="#" target="_blank" rel="noopener">Código</a>
+    <span class="v" id="ver"></span>
+  </footer>
 
+  <script src="changelog.js"></script>
   <script src="popup.js"></script>
 </body>
 </html>

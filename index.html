@@ -3,13 +3,19 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>ITSON CIA Wrap — Interfaz moderna para el portal de ITSON</title>
+<title>CIA Wrap — Interfaz moderna para el portal CIA del ITSON</title>
 <meta name="description" content="Extensión de navegador que le pone una interfaz limpia, rápida y con modo oscuro al sistema CIA / PeopleSoft de ITSON. Corre sobre tu propia sesión: sin servidor, sin credenciales. Open source por Oyzters.">
-<meta property="og:title" content="ITSON CIA Wrap — Interfaz moderna para el portal de ITSON">
+<meta property="og:title" content="CIA Wrap — Interfaz moderna para el portal CIA del ITSON">
 <meta property="og:description" content="Una capa limpia y con modo oscuro sobre el portal CIA / PeopleSoft de ITSON. 100% en tu navegador, open source.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://cia.potronet.com/">
 <link rel="canonical" href="https://cia.potronet.com/">
+<meta property="og:image" content="https://raw.githubusercontent.com/oyzters/CIA-Wrap/main/extension/icons/icon-512.png">
+<meta name="twitter:card" content="summary">
+<meta name="theme-color" content="#0b5cad">
+<link rel="icon" type="image/svg+xml" href="extension/icons/icon.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="extension/icons/icon-32.png">
+<link rel="apple-touch-icon" href="extension/icons/icon-512.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
@@ -38,8 +44,8 @@
     background:color-mix(in srgb, var(--bg) 82%, transparent); border-bottom:1px solid var(--line)}
   .nav-in{display:flex; align-items:center; gap:16px; height:64px}
   .brand{display:flex; align-items:center; gap:10px; font-weight:700; letter-spacing:-.01em; font-size:16px}
-  .brand .mk{width:30px; height:30px; border-radius:9px; display:grid; place-items:center; color:#fff;
-    background:linear-gradient(150deg,var(--brand),var(--brand-deep)); box-shadow:0 4px 12px -3px var(--brand)}
+  .brand .mk{width:30px; height:30px; border-radius:9px; display:block;
+    box-shadow:0 4px 12px -3px var(--brand)}
   .brand .mk svg{width:17px;height:17px}
   .nav-links{margin-left:auto; display:flex; align-items:center; gap:6px}
   .nav-links a{padding:8px 12px; border-radius:9px; font-size:14px; color:var(--ink2)}
@@ -194,7 +200,7 @@
 
 <header class="nav">
   <div class="wrap nav-in">
-    <div class="brand"><span class="mk"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 8l10 5 8-4"/><path d="M6 11v5c0 1.5 2.7 2.6 6 2.6s6-1.1 6-2.6v-5"/></svg></span> ITSON&nbsp;CIA&nbsp;Wrap</div>
+    <div class="brand"><img class="mk" src="extension/icons/icon.svg" alt="" width="30" height="30"> CIA&nbsp;Wrap</div>
     <nav class="nav-links">
       <a href="#features">Características</a>
       <a href="#install">Instalar</a>
@@ -211,7 +217,7 @@
     <div>
       <span class="eyebrow">Extensión de navegador · Open source</span>
       <h1>Una interfaz <span class="g">moderna</span> para el portal de ITSON</h1>
-      <p class="lead">ITSON CIA Wrap le pone una capa limpia, rápida y con modo oscuro al sistema <strong>CIA / PeopleSoft</strong> de ITSON — sidebar, tarjetas y un login rediseñado. Corre <strong>sobre tu propia sesión</strong>: sin servidor, sin tocar tus credenciales.</p>
+      <p class="lead">CIA Wrap le pone una capa limpia, rápida y con modo oscuro al sistema <strong>CIA / PeopleSoft</strong> de ITSON — sidebar, tarjetas y un login rediseñado. Corre <strong>sobre tu propia sesión</strong>: sin servidor, sin tocar tus credenciales.</p>
       <div class="cta">
         <a class="btn btn-primary" data-store href="https://chromewebstore.google.com/search/ITSON%20CIA%20Wrap" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="3.5"/><path d="M12 8.5h8.5M8.97 13.75 4.7 6.4M15.03 13.75 10.8 21"/></svg>Agregar a Chrome</a>
         <a class="btn btn-portal" data-portal href="https://apps9.itson.edu.mx/CIA/index.aspx" rel="noopener">Entrar a CIA <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></a>
@@ -219,7 +225,7 @@
       <div class="tags">
         <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m5 12 5 5 9-11"/></svg>100% en tu navegador</span>
         <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m5 12 5 5 9-11"/></svg>No maneja credenciales</span>
-        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m5 12 5 5 9-11"/></svg>Modo claro y oscuro</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="m5 12 5 5 9-11"/></svg>Modo claro, oscuro o automático</span>
       </div>
     </div>
 
@@ -264,7 +270,7 @@
     </div>
     <div class="features">
       <div class="feat"><div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="16" rx="2"/><path d="M9 4v16"/></svg></div><h3>Sidebar + tarjetas</h3><p>El árbol de menús se convierte en un sidebar limpio y los tiles en tarjetas navegables con accesos directos.</p></div>
-      <div class="feat"><div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></div><h3>Modo oscuro premium</h3><p>Paleta neutra y elegante, persistente en todo el portal. También en claro si lo prefieres.</p></div>
+      <div class="feat"><div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg></div><h3>Claro, oscuro o automático</h3><p>El mismo diseño que iVirtual Wrap, en el tema que elijas o siguiendo a tu sistema, en todo el portal.</p></div>
       <div class="feat"><div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/><path d="m9 12 2 2 4-4"/></svg></div><h3>Privado por diseño</h3><p>Se ejecuta en tu navegador, sobre tu sesión ya iniciada. No hay servidor intermedio ni manejo de contraseñas.</p></div>
       <div class="feat"><div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h13l3 3v13H4z"/><path d="M8 13h8M8 17h5"/></svg></div><h3>Login rediseñado</h3><p>La portada CIA y el inicio de sesión de PeopleSoft con tarjeta oscura, campos y botones cuidados.</p></div>
       <div class="feat"><div class="fi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4z"/></svg></div><h3>Sin permisos de TI</h3><p>No requiere cambios en el servidor ni autorización del área de sistemas. Se instala en un clic.</p></div>
@@ -290,7 +296,7 @@
         <a class="btn btn-portal" data-portal href="https://apps9.itson.edu.mx/CIA/index.aspx" rel="noopener" style="justify-content:center">Entrar a CIA <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7"/><path d="M8 7h9v9"/></svg></a>
         <div class="note">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
-          <p><b>Tu privacidad primero.</b> ITSON CIA Wrap solo re-estiliza las páginas que ya tienes abiertas. No envía datos a ningún lado, no guarda contraseñas y no pasa por servidores externos.</p>
+          <p><b>Tu privacidad primero.</b> CIA Wrap solo re-estiliza las páginas que ya tienes abiertas. No envía datos a ningún lado, no guarda contraseñas y no pasa por servidores externos.</p>
         </div>
         <details class="dev">
           <summary>¿Prefieres instalarla desde el código?</summary>
@@ -324,13 +330,14 @@
 
 <footer>
   <div class="wrap foot">
-    <span class="brand"><span class="mk" style="width:26px;height:26px;border-radius:8px;display:inline-grid;place-items:center;color:#fff;background:linear-gradient(150deg,var(--brand),var(--brand-deep))"><svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 2 8l10 5 8-4"/><path d="M6 11v5c0 1.5 2.7 2.6 6 2.6s6-1.1 6-2.6v-5"/></svg></span> ITSON CIA Wrap</span>
+    <span class="brand"><img class="mk" src="extension/icons/icon.svg" alt="" width="30" height="30"> CIA Wrap</span>
     <span class="sp"></span>
     <a href="https://github.com/oyzters/CIA-Wrap" target="_blank" rel="noopener">GitHub</a>
     <a href="https://github.com/oyzters/CIA-Wrap/issues" target="_blank" rel="noopener">Reportar / Contribuir</a>
+    <a href="privacidad/">Privacidad</a>
     <span>Licencia MIT</span>
   </div>
-  <p class="disclaimer">ITSON CIA Wrap es un proyecto independiente y de código abierto, sin afiliación ni respaldo oficial del Instituto Tecnológico de Sonora (ITSON). "ITSON", "CIA" y PeopleSoft pertenecen a sus respectivos titulares. La extensión no recopila ni transmite datos personales.</p>
+  <p class="disclaimer">CIA Wrap es un proyecto independiente y de código abierto, sin afiliación ni respaldo oficial del Instituto Tecnológico de Sonora (ITSON). "ITSON", "CIA" y PeopleSoft pertenecen a sus respectivos titulares. La extensión no recopila ni transmite datos personales.</p>
 </footer>
 
 <script>

@@ -1,14 +1,13 @@
 /*
- * ITSON Wrap - content script (reskin + shell Nivel B).
- * Corre en cada frame de smartweb*.itson.edu.mx.
+ * CIA Wrap - content script (reskin + shell Nivel B).
+ * Corre en cada frame de smartweb*.itson.edu.mx y en la portada CIA de apps9.
  * - Reskin (content.css): re-estiliza en su lugar todas las pantallas.
  * - Shell (shell.css): SOLO en la homepage clásica (donde existe el pagelet
  *   #MENU) reconstruye un sidebar + topbar + tarjetas reusando los links
  *   reales de PeopleSoft (clic = original.click(), la navegación no cambia).
- * No hace red (salvo REMOTE_CSS_URL opcional), no lee credenciales; solo usa
- * storage local para recordar on/off.
+ * No hace red ni lee credenciales; solo usa storage local para recordar el
+ * on/off y el tema.
  */
-var REMOTE_CSS_URL = "";
 
 (function () {
   'use strict';
@@ -16,22 +15,22 @@ var REMOTE_CSS_URL = "";
   var KEY = 'itson_wrap_enabled';
   var TKEY = 'itson_wrap_theme';
   var enabled = true;
-  var theme = 'dark';   // default: oscuro (paleta del mockup)
+  // 'auto' (por defecto) sigue al sistema; 'light' / 'dark' fijan el tema
+  var theme = 'auto';
+  var mqDark = window.matchMedia ? window.matchMedia('(prefers-color-scheme: dark)') : null;
+  function resolvedTheme(){ return theme === 'auto' ? (mqDark && mqDark.matches ? 'dark' : 'light') : theme; }
+  if(mqDark && mqDark.addEventListener) mqDark.addEventListener('change', function(){ if(theme==='auto'){ applyTheme(); paintThemeBtns(); } });
 
   function themeIcon(){
-    return ic(theme === 'dark'
+    return ic(resolvedTheme() === 'dark'
       ? '<circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4 12H2M22 12h-2M5 5l1.5 1.5M17.5 17.5 19 19M5 19l1.5-1.5M17.5 6.5 19 5"/>'
       : '<path d="M21 12.8A9 9 0 1111.2 3a7 7 0 009.8 9.8z"/>');
   }
-  function applyTheme(){ document.documentElement.classList.toggle('iw-dark', enabled && theme === 'dark'); }
+  function applyTheme(){ document.documentElement.classList.toggle('iw-dark', enabled && resolvedTheme() === 'dark'); }
   function paintThemeBtns(){ document.querySelectorAll('[data-theme-toggle]').forEach(function(b){ b.innerHTML = themeIcon(); }); }
-  function setTheme(v){ theme = v; saveCache(); try { api.storage.local.set({ itson_wrap_theme: v }); } catch (e) {} applyTheme(); paintThemeBtns(); paintLogos(); }
-
-  // logo (PotroNET) empaquetado en la extension
-  var LOGO_DARK = '', LOGO_LIGHT = '';
-  try { LOGO_DARK = api.runtime.getURL('assets/logo-dark.png'); LOGO_LIGHT = api.runtime.getURL('assets/logo-light.png'); } catch (e) {}
-  function logoSrc(){ return theme === 'dark' ? LOGO_DARK : LOGO_LIGHT; }
-  function paintLogos(){}
+  function setTheme(v){ theme = v; saveCache(); try { api.storage.local.set({ itson_wrap_theme: v }); } catch (e) {} applyTheme(); paintThemeBtns(); }
+  // el botón de tema de la página alterna entre claro y oscuro (desde 'auto' parte del que se ve)
+  function toggleTheme(){ setTheme(resolvedTheme()==='dark' ? 'light' : 'dark'); }
   // marca: badge con monograma academico + wordmark
   function brandBadge(){ return '<div class="iw-badge">'+ic('<path d="M12 3 2 8l10 5 8-4"/><path d="M6 11v5c0 1.5 2.7 2.6 6 2.6s6-1.1 6-2.6v-5"/>')+'</div>'; }
 
@@ -119,13 +118,6 @@ var REMOTE_CSS_URL = "";
     if(/perfil/.test(t)) return ICON.user;
     if(/diccionario/.test(t)) return ICON.book;
     return ICON.folder;
-  }
-
-  /* ---------- CSS remoto opcional ---------- */
-  function injectRemoteCss(){
-    if(!REMOTE_CSS_URL || document.getElementById('itson-wrap-remote')) return;
-    var l=document.createElement('link'); l.id='itson-wrap-remote'; l.rel='stylesheet'; l.href=REMOTE_CSS_URL;
-    (document.head||document.documentElement).appendChild(l);
   }
 
   /* ---------- reskin base ---------- */
@@ -238,7 +230,7 @@ var REMOTE_CSS_URL = "";
     var shell=document.createElement('div'); shell.id='iw-shell';
 
     /* sidebar */
-    var side='<aside id="iw-side"><div id="iw-brand">'+brandBadge()+'<div class="iw-bt"><b>ITSON CIA Wrap</b><span>Autoservicio</span></div></div><nav id="iw-nav">';
+    var side='<aside id="iw-side"><div id="iw-brand">'+brandBadge()+'<div class="iw-bt"><b>CIA Wrap</b><span>Autoservicio</span></div></div><nav id="iw-nav">';
     if(nav.folders.length){
       side+='<div class="g">Menú principal</div>';
       nav.folders.forEach(function(f,i){ var col=colorFor(f.text); side+='<a data-k="f'+i+'" style="--c:'+col[0]+'"><span class="iw-ico">'+ic(iconFor(f.text))+'</span><span>'+f.text+'</span></a>'; });
@@ -301,7 +293,7 @@ var REMOTE_CSS_URL = "";
     });
     // tema
     shell.querySelectorAll('[data-theme-toggle]').forEach(function(b){
-      b.addEventListener('click', function(){ setTheme(theme==='dark'?'light':'dark'); });
+      b.addEventListener('click', toggleTheme);
     });
 
     hideOriginals();
@@ -357,7 +349,7 @@ var REMOTE_CSS_URL = "";
         + '<span class="iw-ico">'+ic(iconFor(it.text))+'</span><span>'+it.text+'</span></a>';
     }
 
-    var h='<div class="iw-brand">'+brandBadge()+'<div class="iw-brandtxt"><b>ITSON CIA Wrap</b><span>'
+    var h='<div class="iw-brand">'+brandBadge()+'<div class="iw-brandtxt"><b>CIA Wrap</b><span>'
       + (current?current.text:'Portal') + '</span></div>'
       + '<button class="iw-themebtn" data-theme-toggle title="Tema claro/oscuro">'+themeIcon()+'</button></div>';
     h+='<div class="iw-search">'+ic('<circle cx="11" cy="11" r="7"/><path d="m21 21-4-4"/>')
@@ -383,7 +375,7 @@ var REMOTE_CSS_URL = "";
       var o=map[n.getAttribute('data-k')]; if(o) n.addEventListener('click', relay(o));
     });
     wrap.querySelectorAll('[data-theme-toggle]').forEach(function(b){
-      b.addEventListener('click', function(){ setTheme(theme==='dark'?'light':'dark'); });
+      b.addEventListener('click', toggleTheme);
     });
     var q=wrap.querySelector('#iw-navq');
     if(q) q.addEventListener('keydown', function(e){
@@ -439,7 +431,7 @@ var REMOTE_CSS_URL = "";
       var o=map[n.getAttribute('data-h')]; if(o) n.addEventListener('click', relay(o));
     });
     bar.querySelectorAll('[data-theme-toggle]').forEach(function(b){
-      b.addEventListener('click', function(){ setTheme(theme==='dark'?'light':'dark'); });
+      b.addEventListener('click', toggleTheme);
     });
 
     document.documentElement.classList.add('iw-hdr-built');
@@ -930,7 +922,6 @@ var REMOTE_CSS_URL = "";
   // desde document_start para que nunca se pinte el portal original.
   var ready = false;
   function apply(){
-    injectRemoteCss();
     applyReskin();
     applyTheme();
     applyRoles();
@@ -960,7 +951,7 @@ var REMOTE_CSS_URL = "";
   function setEnabled(v){ enabled=v; saveCache(); try{ api.storage.local.set({ itson_wrap_enabled:v }); }catch(e){} apply(); }
 
   apply();
-  try{ api.storage.local.get({ itson_wrap_enabled:true, itson_wrap_theme:'dark' }, function(r){ enabled=r.itson_wrap_enabled; theme=r.itson_wrap_theme; saveCache(); apply(); }); }
+  try{ api.storage.local.get({ itson_wrap_enabled:true, itson_wrap_theme:'auto' }, function(r){ enabled=r.itson_wrap_enabled; theme=r.itson_wrap_theme; saveCache(); apply(); }); }
   catch(e){}
 
   try{ api.storage.onChanged.addListener(function(ch,area){
@@ -971,7 +962,6 @@ var REMOTE_CSS_URL = "";
 
   /* PeopleSoft re-renderiza por postbacks: re-aplicar de forma idempotente */
   var mo=new MutationObserver(function(){
-    injectRemoteCss();
     document.documentElement.classList.toggle('itson-wrap', enabled);
     applyRoles();
     if(!ready) return;
@@ -985,26 +975,4 @@ var REMOTE_CSS_URL = "";
     if(document.querySelector('frameset') && document.getElementById('iw-shell')) removeShell(); // nunca el shell fijo sobre un frameset
   });
   try{ mo.observe(document.documentElement, { childList:true, subtree:true }); }catch(e){}
-
-  /* ---- CAPTURA TEMPORAL (debug): Ctrl+Shift+Y copia el DOM del frame enfocado ---- */
-  function iwCopyText(s){
-    try{
-      var ta=document.createElement('textarea'); ta.value=s;
-      ta.style.cssText='position:fixed;top:0;left:0;opacity:0;z-index:2147483647';
-      document.body.appendChild(ta); ta.focus(); ta.select();
-      var ok=document.execCommand('copy'); ta.remove(); return ok;
-    }catch(e){ return false; }
-  }
-  document.addEventListener('keydown', function(e){
-    if(!(e.ctrlKey && e.shiftKey && (e.key==='Y'||e.key==='y'))) return;
-    e.preventDefault();
-    try{
-      var c=document.body.cloneNode(true);
-      c.querySelectorAll('script,style,noscript,link,img,#iw-shell,#iw-navwrap,#iw-topbar,#itson-wrap-fab,#screenity-ui').forEach(function(el){ el.remove(); });
-      c.querySelectorAll('input,textarea,select').forEach(function(el){ el.removeAttribute('value'); try{el.value='';}catch(_){}} );
-      var out='### '+(location.href||'')+'\n'+c.innerHTML.slice(0,55000);
-      var ok=iwCopyText(out);
-      console.log('ITSON CIA Wrap capture: '+(ok?'copiado '+out.length+' chars':'fallo'));
-    }catch(err){ console.log('ITSON Wrap capture error', err); }
-  }, true);
 })();
